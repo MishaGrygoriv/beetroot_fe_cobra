@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 16px Helvetica, Sans-Serif;
+  line-height: 24px;
+  background: url(../images/background.jpg);
+}
+.clear {
+  clear: both;
+}
+#page-wrap {
+  width: 800px;
+  margin: 40px auto 60px;
+}
+.image img {
+  transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+.image img:hover {
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.image-left {
+  padding-left: 100px;
+  margin-top: 250px;
+}
+.image-center {
+  display: block;
+  margin: auto;
+  margin-top: -100px;
+}
+.image-right {
+  padding-right: 100px;
+  float: right;
+  margin: -390px 0 0 0;
+}
+.text {
+  color: white;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 200%; /* Размер шрифта в пунктах */
+  text-align: center;
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  background: rgb(0, 17, 255); /* Цвет фона */
+  padding: 20px; /* Поля вокруг текста */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+}
+.text:hover {
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  cursor: pointer;
+  filter: blur(0px);
+  opacity: 0.5;
+}

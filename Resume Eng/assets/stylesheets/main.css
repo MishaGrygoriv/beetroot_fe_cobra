@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 16px Helvetica, Sans-Serif;
+  line-height: 24px;
+  background: url(../images/noise.jpg);
+}
+.clear {
+  clear: both;
+}
+#page-wrap {
+  width: 800px;
+  margin: 40px auto 60px;
+}
+#pic {
+  float: right;
+  margin: 60px 0 0 0;
+}
+.image-hover img {
+  transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+
+.image-hover img:hover {
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+h1 {
+  margin: 0 0 16px 0;
+  padding: 0 0 16px 0;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: -2px;
+  border-bottom: 1px solid #999;
+}
+h2 {
+  font-size: 20px;
+  margin: 0 0 6px 0;
+  position: relative;
+}
+h2 span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-style: italic;
+  font-family: Georgia, Serif;
+  font-size: 16px;
+  color: #999;
+  font-weight: normal;
+}
+p {
+  margin: 0 0 16px 0;
+}
+a {
+  color: #999;
+  text-decoration: none;
+  border-bottom: 1px dotted #999;
+}
+a:hover {
+  border-bottom-style: solid;
+  color: black;
+}
+ul {
+  margin: 0 0 32px 17px;
+}
+#objective {
+  width: 500px;
+  float: left;
+}
+#objective p {
+  font-family: Georgia, Serif;
+  font-style: italic;
+  color: #666;
+}
+p.line {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+  padding: 0 26px 0 0;
+  width: 150px;
+  float: left;
+  height: 100px;
+  border-right: 1px solid #999;
+}
+dt {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: right;
+  padding: 0 26px 0 0;
+  width: 150px;
+  float: left;
+  height: 100px;
+  border-right: 1px solid #999;
+}
+dd {
+  width: 600px;
+  float: right;
+}
+dd.clear {
+  float: none;
+  margin: 0;
+  height: 15px;
+}
+
+/* Social icons */
+.socialicons {
+  float: right;
+  margin-top: -165px;
+  margin-right: -200px;
+}
+.socialicons li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-right: 2px;
+}
+.social-icons li:last-child {
+  margin-right: 0;
+}
+.social-text {
+  float: left;
+  padding: 9px;
+  height: 12px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(221, 221, 221);
+}
+.social-facebook {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background: #222 url("../images/social_facebook1.png") no-repeat 1px 2px;
+}
+.social-instagram {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background: #222 url("../images/social_instagram.png") no-repeat 0px 3px;
+}
+.social-youtube {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background: #222 url("../images/social_youtube.png") no-repeat 2px 2px;
+}
+.social-facebook:hover {
+  background-color: #3b5998;
+}
+.social-instagram:hover {
+  background-color: rgb(243, 173, 22);
+}
+.social-youtube:hover {
+  background-color: #f02206;
+}
