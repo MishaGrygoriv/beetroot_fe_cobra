@@ -1,0 +1,66 @@
+body {
+  display: block;
+  margin: 5px;
+  padding: 5px;
+}
+
+header {
+  background-color: #a52a2a;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+h1:hover {
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  filter: blur(0px);
+  opacity: 0.5;
+}
+
+main {
+  font-size: 18px;
+}
+
+.sunset-pic img {
+  width: 100%;
+}
+
+.style-italic {
+  font-style: italic;
+}
+
+.weight-bold {
+  font-weight: bold;
+}
+
+.color-text {
+  color: #0000ff;
+}
+
+.cars {
+  text-align: center;
+}
+
+.cars img {
+  border: 3px dashed #000;
+}
+
+.cars img:hover {
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+footer {
+  background-color: #000;
+  font-size: 20px;
+}
+
+h4 {
+  color: #fff;
+  text-align: center;
+}
