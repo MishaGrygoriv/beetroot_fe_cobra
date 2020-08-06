@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.1s ease-in;
+}
+body {
+  background-color: #3b3f45;
+  min-height: 100vh;
+  border: 20px solid #fff;
+  box-sizing: border-box;
+  font-family: "Trebuchet", Arial, sans-serif;
+  line-height: 1.3;
+}
+header span,
+footer span {
+  font-size: 25px;
+}
+header,
+footer {
+  text-align: center;
+  color: #eb7773;
+  background-color: #4a4f56;
+  padding: 10px 0;
+  font-size: 20px;
+}
+.list,
+footer {
+  margin: 30px auto;
+  width: 50%;
+}
+.list li {
+  list-style: none;
+  background-color: #88839e;
+}
+ul li:nth-child(even) {
+  background-color: #7a7593;
+}
+label {
+  display: block;
+  padding: 5px;
+  color: #fff;
+  border-top: 2px solid #88839e;
+  border-bottom: 2px solid #88839e;
+}
+label:hover {
+  background-color: #625e77;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+label:active {
+  background-color: #eb7773;
+}
+.name {
+  font-size: 26px;
+  margin-left: 10px;
+}
+.list input[type="checkbox"]:checked ~ span {
+  color: #a49eb2;
+  text-decoration: line-through;
+}
+/*My Checkbox*/
+.checkbox {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 9px;
+  border-radius: 3px;
+  position: relative;
+  margin-left: 5px;
+}
+.checkbox:active,
+.checkbox:checked:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox:checked {
+  background-color: #e9ecee;
+  border: 1px solid #adb8c0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),
+    inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+  color: #99a1a7;
+}
+.checkbox:checked:after {
+  content: "\2714";
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  color: #424242;
+}
+/*My Checkbox*/
+.text {
+  word-spacing: -1px;
+  font-size: 16px;
+  color: #cdcbd6;
+  margin-left: 0px;
+  vertical-align: 2px;
+}
+.text::before {
+  content: "( ";
+}
+.text::after {
+  content: " )";
+}
