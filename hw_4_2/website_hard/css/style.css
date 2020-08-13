@@ -1,5 +1,7 @@
 body {
   background-color: #990909;
+  margin: 70px;
+  margin-top: 20px;
 }
 .website {
   text-align: center;
@@ -71,10 +73,10 @@ main {
   background: #786b59;
   color: #ffe;
 }
-.text {
+section {
   color: #fff;
-  padding: 15px 0;
-  margin-top: 10px;
+  padding: 15px 15px 0px 0px;
+  margin-top: -10px;
   margin-bottom: -50px;
 }
 .right_box {
