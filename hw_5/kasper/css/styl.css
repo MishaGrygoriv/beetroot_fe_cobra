@@ -2,7 +2,7 @@
 :root {
   /* colors */
   --background-color: #121116;
-  --text-color: #fff;
+  --white-color: #fff;
   --kasper-text-color: #19c8fa;
   /* font-sizes */
   --main-size: 20px;
@@ -35,13 +35,12 @@ main {
 }
 .logo {
   display: inline-block;
-  margin-top: 120px;
+  margin-bottom: 50px;
 }
 
 .title {
   font-family: var(--main-font);
-  color: var(--text-color);
-  padding-top: 50px;
+  color: var(--white-color);
   padding-bottom: 20px;
   font-size: var(--main-size);
 }
@@ -50,7 +49,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border-top: 1px solid #fff;
+  border-top: 1px solid var(--white-color);
   padding-top: 21px;
   list-style: none;
 }
@@ -60,7 +59,7 @@ a {
 }
 
 footer {
-  color: var(--text-color);
+  color: var(--white-color);
   font-size: var(--footer-size);
   text-align: center;
   font-family: var(--main-font);
