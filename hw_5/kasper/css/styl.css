@@ -25,18 +25,20 @@ body {
   justify-content: center;
   background-color: var(--background-color);
 }
+main {
+  margin: auto;
+}
 .main {
   text-align: center;
   min-width: 230px;
+  margin-bottom: 86px;
 }
 .logo {
   display: inline-block;
-  width: 112px;
-  height: 36px;
   margin-top: 120px;
 }
 
-.text {
+.title {
   font-family: var(--main-font);
   color: var(--text-color);
   padding-top: 50px;
@@ -50,9 +52,14 @@ body {
   justify-content: space-around;
   border-top: 1px solid #fff;
   padding-top: 21px;
+  list-style: none;
 }
+
+a {
+  display: flex;
+}
+
 footer {
-  padding-top: 86px;
   color: var(--text-color);
   font-size: var(--footer-size);
   text-align: center;
@@ -61,4 +68,7 @@ footer {
 footer a {
   color: var(--kasper-text-color);
   text-decoration: none;
+}
+.kasper {
+  display: inline-block;
 }
