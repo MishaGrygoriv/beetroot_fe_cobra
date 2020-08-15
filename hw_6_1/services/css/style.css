@@ -1,3 +1,9 @@
+@font-face {
+  font-family: Proxima Nova Regular;
+  src: url(../assets/fonts/proxima_nova_regular.ttf);
+  font-family: Proxima Nova Light;
+  src: url(../assets/fonts/proxima_nova_light.ttf);
+}
 :root {
   /* colors */
   --white: #fff;
@@ -21,28 +27,20 @@ body {
   min-height: 100vh;
   font-size: 100%;
 }
-
 body {
   font-family: var(--main-font);
   background-color: var(--white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-main {
-  margin-bottom: 400px;
-}
-.main {
+section {
   display: flex;
-  margin: 54px 100px 66px;
+  justify-content: space-around;
+  text-align: center;
 }
 .block {
-  margin-left: 100px;
-  width: 220px;
-  height: 168px;
-}
-.block:first-child {
-  margin-left: 0;
+  padding: 54px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 .pic {
   border: 1px solid var(--blue);
@@ -52,10 +50,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 76px;
-  margin-bottom: 20px;
+  margin: 0 auto;
   fill: var(--blue);
   transition: background-color 0.2s ease;
+  margin-bottom: 20px;
 }
 .pic:hover {
   background-color: var(--blue);
@@ -72,10 +70,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 76px;
-  margin-bottom: 20px;
+  margin: 0 auto;
   fill: var(--white);
   transition: background-color 0.2s ease;
+  margin-bottom: 20px;
 }
 .pic-blue:hover {
   background-color: var(--white);
@@ -83,29 +81,30 @@ main {
 .pic-blue:hover svg {
   fill: var(--blue);
 }
-.text {
-  margin-top: 22px;
+.first_icon {
+  width: 25px;
+  height: 31px;
 }
-.down {
-  margin-bottom: -1px;
+.second_icon {
+  width: 27px;
+  height: 27px;
 }
-.up {
-  margin-bottom: 2px;
+.third_icon {
+  width: 29px;
+  height: 25px;
 }
 h3 {
   font-family: var(--main-text-font);
   font-size: var(--main-size);
-  width: 140px;
-  height: 10px;
-  margin-left: 40px;
   text-align: center;
   color: var(--main-text);
+  margin-bottom: 22px;
 }
-.text {
+.title {
   font-size: var(--title-size);
   font-family: var(--title-text-font);
   text-align: center;
   width: 220px;
-  height: 52px;
+  height: 75px;
   color: var(--text-color);
 }
