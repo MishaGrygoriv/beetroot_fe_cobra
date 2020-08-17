@@ -22,27 +22,24 @@ body {
 header {
   margin-bottom: 30px;
 }
-header span,
-footer button {
+header span {
   font-size: 25px;
 }
 header,
-footer {
+main .btn {
   text-align: center;
   color: #eb7773;
   background-color: #4a4f56;
   padding: 20px 5%;
   font-size: 20px;
 }
-form,
-footer {
+form {
   margin: 0px auto;
   width: 50%;
 }
-main {
+.list {
   margin-bottom: 30px;
 }
-
 .list li {
   list-style: none;
   background-color: #88839e;
@@ -132,7 +129,7 @@ label:active {
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
+  color: #eb7773;
   background-color: #625e77;
   border: none;
   border-radius: 15px;
@@ -141,13 +138,8 @@ label:active {
 .button:hover {
   background-color: #3b3f45;
 }
-
 .button:active {
   background-color: #eb7773;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
-button a {
-  color: #eb7773;
-  text-decoration: none;
 }

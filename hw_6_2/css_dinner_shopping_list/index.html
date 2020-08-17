@@ -15,11 +15,17 @@
       <span>Let's go to the mall!</span>
     </header>
     <main>
-      <form>
+      <form id="shopping_list">
         <ul class="list">
           <li>
             <label>
-              <input type="checkbox" class="checkbox" />
+              <input
+                id="pickles"
+                type="checkbox"
+                class="checkbox"
+                name="product"
+                value="pickles"
+              />
               <span class="name"
                 >A lot of pickles
                 <span class="title">for the next lessons about CSS</span>
@@ -28,7 +34,13 @@
           </li>
           <li>
             <label>
-              <input type="checkbox" class="checkbox" />
+              <input
+                id="apples"
+                type="checkbox"
+                class="checkbox"
+                name="product"
+                value="oranges"
+              />
               <span class="name"
                 >10 apples
                 <span class="title">for more CSS manipulations</span>
@@ -37,7 +49,13 @@
           </li>
           <li>
             <label>
-              <input type="checkbox" class="checkbox" />
+              <input
+                id="oranges"
+                type="checkbox"
+                class="checkbox"
+                name="product"
+                value="oranges"
+              />
               <span class="name"
                 >20 oranges
                 <span class="title">because they are awesome</span>
@@ -46,7 +64,13 @@
           </li>
           <li>
             <label>
-              <input type="checkbox" class="checkbox" />
+              <input
+                id="plates"
+                type="checkbox"
+                class="checkbox"
+                name="product"
+                value="plates"
+              />
               <span class="name"
                 >13 plates
                 <span class="title">hm... they always disappear</span>
@@ -55,13 +79,25 @@
           </li>
           <li>
             <label>
-              <input type="checkbox" class="checkbox" />
+              <input
+                id="bentos"
+                type="checkbox"
+                class="checkbox"
+                name="product"
+                value="bentos"
+              />
               <span class="name">15 bentos</span>
             </label>
           </li>
           <li>
             <label>
-              <input type="checkbox" class="checkbox" />
+              <input
+                id="sake"
+                type="checkbox"
+                class="checkbox"
+                name="product"
+                value="sake"
+              />
               <span class="name"
                 >1 bottle of Sake ^_^
                 <span class="title">for my friends</span>
@@ -69,13 +105,18 @@
             </label>
           </li>
         </ul>
+        <div class="btn">
+          <button
+            type="submit"
+            class="button"
+            form="shopping_list"
+            value="submit"
+          >
+            Bon appetit :)
+          </button>
+        </div>
       </form>
     </main>
-    <footer>
-      <button class="button">
-        <a href="#">Bon appetit :)</a>
-      </button>
-    </footer>
     <script src="./js/script.js"></script>
   </body>
 </html>
