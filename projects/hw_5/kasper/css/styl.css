@@ -41,7 +41,7 @@ main {
 .title {
   font-family: var(--main-font);
   color: var(--white-color);
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   font-size: var(--main-size);
 }
 
@@ -49,8 +49,6 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border-top: 1px solid var(--white-color);
-  padding-top: 21px;
   list-style: none;
 }
 
@@ -70,4 +68,10 @@ footer a {
 }
 .kasper {
   display: inline-block;
+}
+.social_wrapper::before {
+  content: "";
+  display: flex;
+  border-top: 1px solid var(--white-color);
+  margin-bottom: 21px;
 }

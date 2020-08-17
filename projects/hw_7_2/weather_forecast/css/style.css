@@ -53,10 +53,15 @@ body {
 .weather a {
   text-decoration: none;
   color: var(--white-color);
+  display: inline-block;
 }
-.weather a:hover + i {
+.weather_title a:hover {
   color: #ffcc66;
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+.weather_title a:hover + i {
+  color: #ffcc66;
+  transform: translate(20px, 0);
 }
 .forecast {
   margin-bottom: 20px;
@@ -124,6 +129,9 @@ body {
   color: var(--white-color);
   font-size: var(--small-size);
   font-family: var(--title-font);
+}
+.forecast:hover {
+  background-color: white;
 }
 .forecast_list:hover .forecast_list_item:not(:hover) {
   opacity: 0.7;
