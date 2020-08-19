@@ -136,6 +136,9 @@ body {
 .forecast_list:hover .forecast_list_item:not(:hover) {
   opacity: 0.7;
 }
+.forecast_list:hover {
+  cursor: url(../assets/images/icon_plane.png), pointer;
+}
 .forecast_list_item:hover > p {
   opacity: 1;
   cursor: url(../assets/images/icon_plane.png), pointer;
