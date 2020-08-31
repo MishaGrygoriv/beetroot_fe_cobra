@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $main-font;
+}
+
+html,
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    background-color: $bg-color;
+}
+
+.container {
+    max-width: 1120px;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
