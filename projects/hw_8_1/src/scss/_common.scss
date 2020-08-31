@@ -9,7 +9,13 @@ html,
 body {
     min-height: 100vh;
     font-size: 100%;
+}
+
+body {
     background-color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
@@ -19,4 +25,5 @@ a {
 
 img {
     max-width: 100%;
+    height: auto;
 }
