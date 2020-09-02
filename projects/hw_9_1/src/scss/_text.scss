@@ -1,0 +1,65 @@
+.card {
+    max-width: 1400px;
+    margin: auto;
+    padding: 120px 100px;
+    .container {
+        max-width: 1140px;
+        margin: auto;
+        box-shadow: 0 0 2em 1em #f4f4f4;
+        padding: 140px 140px 120px 120px;
+    }
+    &__title {
+        color: $title-color;
+        font-size: $title-size;
+        font-family: $title-font;
+        margin-bottom: 40px;
+    }
+    &__text-wrapper {
+        margin-bottom: 40px;
+    }
+    &__text {
+        color: $text-color;
+        font-size: $text-size;
+        font-family: $text-font;
+        font-weight: 300;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &--quote {
+            font-size: $quote-size;
+            &:before {
+                content: "“";
+                font-size: 60px;
+                line-height: 0.7;
+                padding: 0 15px 0 10px;
+            }
+        }
+    }
+    &__first-letter {
+        color: $title-color;
+        font-size: $letter-size;
+        font-family: $title-font;
+        float: left;
+        margin-right: 25px;
+        transform: translateY(-60px);
+        max-height: 75px;
+    }
+    &__btn {
+        border: 1px solid $btn-color;
+        background-color: $white-color;
+        color: $btn-color;
+        font-size: $text-size;
+        font-family: $text-font;
+        font-weight: 700;
+        letter-spacing: 5px;
+        padding: 18px 50px;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+            background-color: $btn-color;
+            color: $white-color;
+        }
+    }
+}
