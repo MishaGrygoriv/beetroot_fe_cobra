@@ -30,6 +30,7 @@ $style: "cards";
         text-decoration: none;
         color: inherit;
         cursor: pointer;
+        display: block;
     }
     &__img-wrapper {
         transition: opacity 0.2s ease;
@@ -68,11 +69,10 @@ $style: "cards";
     }
     &__title {
         background-color: $white-color;
-        padding: 62px 26px 25px 26px;
+        padding: 16px 26px 25px 26px;
         position: relative;
         &--big {
             background: none;
-            height: 140px;
             width: 70%;
             position: absolute;
             bottom: 2px;
@@ -82,9 +82,8 @@ $style: "cards";
     &__title-date {
         font-size: $small-text-size;
         color: $small-text-color;
-        position: absolute;
-        top: 20px;
         text-transform: uppercase;
+        margin-bottom: 30px;
         &--big {
             color: $white-color;
             font-size: $small-text-size;
@@ -103,6 +102,9 @@ $style: "cards";
             color: $white-color;
             font-size: $title-size;
             margin: 0;
+        }
+        &--space {
+            padding-top: 45px;
         }
     }
     &__title-icon {
