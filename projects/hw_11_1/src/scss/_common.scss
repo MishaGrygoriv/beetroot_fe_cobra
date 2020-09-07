@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.1s ease-in;
+}
+
+html,
+body {
+    min-height: 100vh;
+    font-size: 100%;
+}
+
+body {
+    font-family: $main-font;
+    background: $bg-color url("../img/Group\ 2.png") no-repeat center;
+    background-size: cover;
+}
+
+section {
+    padding: 200px 0px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 0 55px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
