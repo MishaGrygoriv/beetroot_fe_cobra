@@ -1,0 +1,38 @@
+$style: "main";
+.#{$style} {
+    &__container {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        border-bottom: 2px solid $text-color;
+        border-right: 2px solid $text-color;
+        border-left: 2px solid $text-color;
+    }
+    &__title {
+        transform: translate(0, -22px);
+        background-color: $white-color;
+        @include text($main-title-size, 700, $text-color);
+        letter-spacing: 5.44px;
+        text-transform: uppercase;
+        position: relative;
+        &:before,
+        &:after {
+            content: "";
+            width: 100%;
+            max-width: 240px;
+            height: 2px;
+            background-color: $text-color;
+            display: inline-block;
+            position: absolute;
+            top: 53%;
+        }
+        &:before {
+            left: 0px;
+            transform: translateY(-50%) translateX(-0.7%);
+        }
+        &:after {
+            right: 0px;
+            transform: translateY(-50%) translateX(0.7%);
+        }
+    }
+}

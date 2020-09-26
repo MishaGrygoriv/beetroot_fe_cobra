@@ -1,0 +1,86 @@
+$style: "header";
+.#{$style} {
+    background: url("../img/hero-bg.jpeg") no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    min-height: 100vh;
+    @include flex(center,
+    center,
+    column);
+    &__logo {
+        margin-bottom: 75px;
+    }
+    &__title {
+        @include text($header-title-size,
+        700,
+        $white-color);
+        max-width: 600px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 8.64px;
+        margin-bottom: 53px;
+        span {
+            display: block;
+        }
+    }
+    &__text {
+        @include text($header-text-size,
+        400,
+        $white-color);
+        max-width: 600px;
+        text-align: center;
+        margin-bottom: 130px;
+        text-transform: uppercase;
+        line-height: 1.93;
+        letter-spacing: 1.1px;
+        span {
+            display: block;
+        }
+    }
+    &__scroll {
+        fill: $white-color;
+        cursor: pointer;
+        animation-name: svg-fill;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transition: fill 0.2s ease;
+        svg:hover {
+            animation-name: svg-reset;
+            fill: $white-color;
+        }
+    }
+    a:hover+&__scroll-text {
+        opacity: 1;
+    }
+    &__scroll-text {
+        @include text($header-text-size,
+        400,
+        rgba($white-color, 0.8));
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 20px;
+        opacity: 0;
+        transition: 1s ease;
+    }
+}
+
+@keyframes svg-fill {
+    10% {
+        fill: $white-color;
+    }
+    60% {
+        fill: $text-color;
+    }
+    100% {
+        fill: $white-color;
+    }
+}
+
+@keyframes svg-reset {
+    from {
+        fill: $white-color;
+    }
+    to {
+        fill: $white-color;
+    }
+}

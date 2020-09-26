@@ -1,0 +1,71 @@
+$style: "gallery";
+.#{$style} {
+    max-width: 100%;
+    &__list {
+        @include flex();
+        flex-wrap: wrap;
+    }
+    &__item {
+        min-width: 30%;
+        flex-basis: 30%;
+        min-height: 237px;
+        margin-right: 10px;
+        margin-bottom: 9px;
+        @include transition();
+        &:hover {
+            opacity: 0.6;
+        }
+        &:nth-child(1) {
+            background-image: url("../img/topworkz.jpeg");
+            background-size: cover;
+        }
+        &:nth-child(2) {
+            background-image: url("../img/joint.jpeg");
+            background-size: cover;
+        }
+        &:nth-child(3) {
+            background-image: url("../img/market.jpeg");
+            background-size: cover;
+        }
+        &:nth-child(4) {
+            background-image: url("../img/worktop.jpeg");
+            background-size: cover;
+        }
+        &:nth-child(5) {
+            background-image: url("../img/lable.jpeg");
+            background-size: cover;
+        }
+        &:nth-child(6) {
+            background-image: url("../img/kyiv.jpeg");
+            background-size: cover;
+        }
+        &:nth-child(n+4) {
+            margin-bottom: 0;
+        }
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+        &--large {
+            flex-grow: 2;
+        }
+    }
+    &__link {
+        display: block;
+        height: 100%;
+        cursor: pointer;
+        position: relative;
+    }
+    &__title {
+        position: absolute;
+        top: 169px;
+        left: 49px;
+        @include text($main-title-size,
+        700,
+        $white-color);
+        text-transform: uppercase;
+        letter-spacing: 5.44px;
+    }
+    &__item:hover &__title {
+        color: $text-color;
+    }
+}

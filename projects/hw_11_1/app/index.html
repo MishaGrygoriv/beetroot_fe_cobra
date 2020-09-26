@@ -13,62 +13,85 @@
     <section>
         <div class="container">
             <div class="product-card">
-                <div class="product-card__col">
-                    <a class="product-card__logo" href="/">
-                        <img src="./img/logo@1X.png" alt="logo" />
-                    </a>
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/Nike-SB-Stefan-Janoski-Max@1X.png" alt="nike" />
+                <form class="product-card__form">
+                    <div class="product-card__col">
+                        <div class="product-card__logo-wrapper">
+                            <a class="product-card__logo" href="/">
+                                <img src="./img/logo@1X.png" alt="logo" />
+                            </a>
+                        </div>
+                        <div class="product-card__img-wrapper">
+                            <img src="./img/Nike-SB-Stefan-Janoski-Max@1X.png" alt="nike" />
+                        </div>
+                        <div class="product-card__radio-wrapper">
+                            <label class="product-card__radio-label">
+                  <input type="radio" name="color" value="black" checked />
+                  <span
+                    class="product-card__button product-card__button--black"
+                  ></span>
+                </label>
+                            <label class="product-card__radio-label">
+                  <input type="radio" name="color" value="white" />
+                  <span
+                    class="product-card__button product-card__button--white"
+                  ></span>
+                </label>
+                            <label class="product-card__radio-label">
+                  <input type="radio" name="color" value="red" />
+                  <span
+                    class="product-card__button product-card__button--red"
+                  ></span>
+                </label>
+                            <label class="product-card__radio-label">
+                  <input type="radio" name="color" value="blue" />
+                  <span
+                    class="product-card__button product-card__button--blue"
+                  ></span>
+                </label>
+                        </div>
                     </div>
-                    <div class="product-card__dots-wrapper">
-                        <button class="product-card__dot product-card__dot--black"></button>
-                        <button class="product-card__dot product-card__dot--white"></button>
-                        <button class="product-card__dot product-card__dot--red"></button>
-                        <button class="product-card__dot product-card__dot--blue"></button>
-                    </div>
-                </div>
-                <div class="product-card__col">
-                    <div class="product-card__info">
-                        <h2 class="product-card__title">Nike SB Stefan Janoski Max</h2>
-                        <p class="product-card__text">Unisex Skateboarding Shoe</p>
-                        <ul class="product-card__list">
-                            <li class="product-card__item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24">
-                    <path
-                      d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"
-                    />
-                  </svg>
-                            </li>
-                            <li class="product-card__item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24">
-                    <path
-                      d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"
-                    />
-                  </svg>
-                            </li>
-                            <li class="product-card__item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24">
-                    <path
-                      d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"
-                    />
-                  </svg>
-                            </li>
-                            <li class="product-card__item product-card__item--grey">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24">
-                    <path
-                      d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"
-                    />
-                  </svg>
-                            </li>
-                            <li class="product-card__item product-card__item--grey">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24">
-                    <path
-                      d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"
-                    />
-                  </svg>
-                            </li>
-                        </ul>
-                        <form class="product-card__form">
+                    <div class="product-card__col">
+                        <div class="product-card__info">
+                            <h2 class="product-card__title">Nike SB Stefan Janoski Max</h2>
+                            <p class="product-card__text">Unisex Skateboarding Shoe</p>
+                            <ul class="product-card__list">
+                                <li class="product-card__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24">
+                      <path
+                        d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"
+                      />
+                    </svg>
+                                </li>
+                                <li class="product-card__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24">
+                      <path
+                        d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"
+                      />
+                    </svg>
+                                </li>
+                                <li class="product-card__item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24">
+                      <path
+                        d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"
+                      />
+                    </svg>
+                                </li>
+                                <li class="product-card__item product-card__item--grey">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24">
+                      <path
+                        d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"
+                      />
+                    </svg>
+                                </li>
+                                <li class="product-card__item product-card__item--grey">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24">
+                      <path
+                        d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"
+                      />
+                    </svg>
+                                </li>
+                            </ul>
+
                             <select name="Size" id="Size">
                   <option value="Size">Size</option>
                   <option value="42">42</option>
@@ -90,9 +113,9 @@
                     class="product-card__btn"
                   />
                 </label>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>

@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in;
+}
+
+html,
+body {
+    min-height: 100vh;
+    font-size: 100%;
+}
+
+body {
+    font-family: $main-font;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.uk-position-relative {
+    margin-bottom: 50px;
+}
+
+.uk-slider-nav a {
+    background-color: $header-title-color;
+    border-color: $header-title-color;
+}
+
+.uk-slider-nav a:focus {
+    background-color: $white-color;
+    border-color: $header-title-color;
+}
+
+.uk-dotnav>.uk-active>* {
+    background-color: $white-color;
+    border-color: $header-title-color;
+}
+
+.uk-dotnav>*> :hover {
+    background-color: $white-color;
+    border-color: $header-title-color;
+}
+
+.uk-slidenav {
+    color: $header-title-color;
+}

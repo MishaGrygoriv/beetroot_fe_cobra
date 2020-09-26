@@ -1,9 +1,12 @@
 $style: "cards";
 .#{$style} {
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
-    padding: 80px 30px;
+    align-items: center;
+    height: 100vh;
+    max-width: 1200px;
+    display: flex;
+    padding: 0 30px;
     &__wrapper {
         background-color: $white-color;
         flex: 0 1 calc((100% / 3) - 2rem);
@@ -13,11 +16,16 @@ $style: "cards";
         align-items: center;
         justify-content: space-between;
         text-align: center;
-        padding: 40px 100px 100px;
+        padding: 30px 100px;
         box-shadow: 1px 2px 5px 0px rgba(158, 158, 158, 0.5);
+        min-height: 441px;
+        min-width: 360px;
         &:hover {
             transform: scale(1.1);
         }
+    }
+    &__description {
+        height: 380px;
     }
     &__price {
         color: $price-color;
@@ -65,7 +73,7 @@ $style: "cards";
         font-family: $main-font;
         font-weight: 400;
         position: relative;
-        top: 10%;
+        top: 5px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -76,7 +84,7 @@ $style: "cards";
         font-family: $main-font;
         font-weight: 300;
         position: relative;
-        top: 15%;
+        top: 20px;
         left: 0;
         right: 0;
         bottom: 0;

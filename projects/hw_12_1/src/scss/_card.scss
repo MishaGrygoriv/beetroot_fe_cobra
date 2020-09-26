@@ -1,0 +1,196 @@
+$style: "form-section";
+.#{$style} {
+    min-height: 100vh;
+    @include flex(center, center);
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient( 45deg, rgba(45, 32, 168, 1) 0%, rgba(45, 32, 168, 1) 15%, rgba(200, 115, 217, 1) 77%, rgba(200, 115, 217, 1) 100%);
+        max-width: 400px;
+        width: 100%;
+        box-shadow: 0 20px 16px rgba(0, 0, 0, 0.4);
+        padding: 29px 70px;
+        min-height: 100%;
+        position: relative;
+        z-index: 1;
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            background: url("../img/Vector\ Smart\ Object.png") no-repeat center;
+            @include position();
+            z-index: 0;
+        }
+    }
+    &__header {
+        @include flex(flex-start,
+        center);
+        margin-bottom: 51px;
+    }
+    &__header-title {
+        color: rgba($text-color, 0.7);
+        font-size: $big-size;
+        margin-right: 25px;
+        position: relative;
+        cursor: pointer;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            color: $text-color;
+            &:before {
+                content: "";
+                position: absolute;
+                border-bottom: 2px solid $line-color;
+                width: 100%;
+                top: 0;
+                bottom: -5px;
+                left: 0;
+                right: 0;
+            }
+        }
+        &--line {
+            color: $text-color;
+            &:before {
+                content: "";
+                position: absolute;
+                border-bottom: 2px solid $line-color;
+                width: 100%;
+                top: 0;
+                bottom: -5px;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+    &__form {
+        @include flex(flex-start,
+        stretch,
+        column);
+        z-index: 1;
+        label {
+            margin-bottom: 10px;
+            color: $text-color;
+            font-size: $middle-size;
+            &:last-child {
+                margin-bottom: 0;
+                color: $text-color;
+                font-size: $small-size;
+            }
+        }
+        .inputs {
+            @include flex(stretch,
+            stretch,
+            column);
+            width: 100%;
+        }
+    }
+    &__input {
+        height: 43px;
+        background-color: transparent;
+        outline: none;
+        border: 2px solid rgba($white-color, 0.6);
+        padding: 0 15px;
+        @include transition();
+        color: $white-color;
+        &::placeholder {
+            color: rgba($white-color, 0.6);
+        }
+        &:hover,
+        &:focus {
+            border: 1px solid $btn-color;
+        }
+    }
+    input:invalid+&__error {
+        visibility: visible;
+    }
+    &__error {
+        visibility: hidden;
+        margin-bottom: 18px;
+        color: $line-color;
+        font-size: 12px;
+    }
+    &__checkbox-wrapper {
+        margin-bottom: 38px;
+        [type="checkbox"] {
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            position: absolute;
+            opacity: 0;
+        }
+    }
+    &__label {
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;
+    }
+    [type="checkbox"]:checked+&__label &__checkbox {
+        font-size: 12px;
+    }
+    [type="checkbox"]:focus+&__label &__checkbox {
+        border: 2px solid $line-color;
+    }
+    &__checkbox {
+        width: 16px;
+        height: 16px;
+        background-color: $btn-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 7px;
+        font-size: 0;
+        border: 2px solid $btn-color;
+        transition: ease 0.3s font-size;
+    }
+    &__button {
+        height: 43px;
+        background-color: $btn-color;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: $text-color;
+        font-size: $big-size;
+        margin-bottom: 33px;
+        &:hover {
+            background-color: rgba($btn-color, 0.7);
+            color: rgba($text-color, 0.8);
+        }
+    }
+    &__link {
+        display: inline-block;
+        color: rgba($text-color, 0.3);
+        font-size: $small-size;
+        margin-right: 33px;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.1s ease-in;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover,
+        &:focus {
+            color: $text-color;
+            &:before {
+                content: "";
+                position: absolute;
+                border-bottom: 1px solid $white-color;
+                width: 100%;
+                top: 0;
+                bottom: -4px;
+                left: 0;
+                right: 0;
+            }
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            border-bottom: 1px solid rgba($white-color, 0.1);
+            width: 100%;
+            top: 0;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+        }
+    }
+}

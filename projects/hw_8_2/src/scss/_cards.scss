@@ -10,7 +10,6 @@ $style: "cards";
         min-height: 540px;
         max-width: calc(100% / 3 - 20px);
         margin-right: 20px;
-        margin-bottom: 20px;
         transition: opacity 0.2s ease;
         &:nth-child(3n + 2) {
             margin-right: 0;
@@ -18,7 +17,6 @@ $style: "cards";
         &--big {
             min-width: calc(70% - 58px);
             margin-right: 20px;
-            margin-bottom: 20px;
             position: relative;
             display: flex;
         }
@@ -34,7 +32,8 @@ $style: "cards";
     }
     &__img-wrapper {
         transition: opacity 0.2s ease;
-        min-height: 250px;
+        padding-bottom: 66.4%;
+        max-width: 354px;
         position: relative;
         img {
             width: 100%;
@@ -50,11 +49,11 @@ $style: "cards";
             opacity: 0.5;
         }
         &--big {
-            min-width: 100%;
-            min-height: 540px;
+            max-width: 100%;
+            padding-bottom: 3%;
             img {
                 width: 100%;
-                min-height: 546px;
+                height: 100%;
                 object-fit: cover;
                 position: relative;
                 top: 0;
@@ -75,7 +74,7 @@ $style: "cards";
             background: none;
             width: 70%;
             position: absolute;
-            bottom: 2px;
+            bottom: 22px;
             padding: 40px 10px 16px 38px;
         }
     }

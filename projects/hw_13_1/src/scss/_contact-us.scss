@@ -1,0 +1,35 @@
+$style: "contact-us";
+.#{$style} {
+    max-width: 100%;
+    @include flex(center, center, column);
+    padding: 134px 0 0;
+    &__text-wrapper {
+        padding: 0 180px 50px;
+    }
+    &__text {
+        @include text($main-text-size, 300, $text-color);
+        line-height: 1.62;
+        margin-bottom: 41px;
+        span {
+            display: block;
+        }
+    }
+    &__btn {
+        min-width: 395px;
+        background-color: $text-color;
+        border: none;
+        outline: none;
+        padding: 24px 0;
+        letter-spacing: 2.56px;
+        color: $white-color;
+        text-transform: uppercase;
+        cursor: pointer;
+        @include transition();
+        &:hover {
+            background-color: rgba($text-color, 0.9);
+        }
+        &:active {
+            background-color: $text-color;
+        }
+    }
+}

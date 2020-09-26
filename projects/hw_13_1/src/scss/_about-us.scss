@@ -1,0 +1,21 @@
+$style: "about-us";
+.#{$style} {
+    max-width: 100%;
+    @include flex(center, center, column);
+    padding: 146px 0 159px;
+    &__text-wrapper {
+        padding: 0 188px 29px;
+    }
+    &__text {
+        @include text($main-text-size, 300, $text-color);
+        line-height: 1.5;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+            padding: 0 40px;
+        }
+        span {
+            display: block;
+        }
+    }
+}

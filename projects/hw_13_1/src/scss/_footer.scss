@@ -1,0 +1,12 @@
+$style: "footer";
+.#{$style} {
+    @include flex(center, center);
+    padding: 63px 0;
+    &__logo {
+        margin-right: 36px;
+        cursor: pointer;
+    }
+    &__text {
+        @include text($section-text-size, 400, $text-color);
+    }
+}

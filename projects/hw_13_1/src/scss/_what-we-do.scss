@@ -1,0 +1,63 @@
+$style: "what-we-do";
+.#{$style} {
+    @include flex(center, center, column);
+    max-width: 100%;
+    padding: 119px 0 114px;
+    &__container {
+        padding-bottom: 92px;
+        span {
+            display: block;
+        }
+    }
+    &__title {
+        margin-bottom: 92px;
+    }
+    &__design {
+        margin-bottom: 109px;
+    }
+    &__design-svg {
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+    &__design-title {
+        @include text($section-title-size, 700, $text-color);
+        letter-spacing: 3.2px;
+        margin-bottom: 37px;
+    }
+    &__design-text {
+        padding: 0 173px 0 181px;
+        @include text($section-text-size, 300, $text-color);
+        line-height: 1.85;
+    }
+    &__development {
+        margin-bottom: 93px;
+    }
+    &__development-svg {
+        display: inline-block;
+        margin-bottom: 37px;
+    }
+    &__development-title {
+        @include text($section-title-size, 700, $text-color);
+        letter-spacing: 3.2px;
+        margin-bottom: 43px;
+    }
+    &__development-text {
+        padding: 0 173px 0 181px;
+        @include text($section-text-size, 300, $text-color);
+        line-height: 1.85;
+    }
+    &__product-svg {
+        display: inline-block;
+        margin-bottom: 44px;
+    }
+    &__product-title {
+        @include text($section-title-size, 700, $text-color);
+        letter-spacing: 3.2px;
+        margin-bottom: 47px;
+    }
+    &__product-text {
+        padding: 0 180px 0 188px;
+        @include text($section-text-size, 300, $text-color);
+        line-height: 1.85;
+    }
+}
