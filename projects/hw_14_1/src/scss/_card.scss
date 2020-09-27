@@ -1,11 +1,8 @@
 $style: "section";
 .#{$style} {
-    min-height: 100vh;
-    &__container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 112px 0;
-    }
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 112px 0;
     &__header {
         @include flex(center, center, column);
         margin-bottom: 15px;
@@ -19,6 +16,18 @@ $style: "section";
         @include text($header-title-size, 900, $header-title-color);
         font-family: $title-font;
         margin-bottom: 45px;
+        span {
+            animation: reveal 3000ms infinite ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+            transition: all 1s ease;
+            &:hover {
+                animation: none;
+                text-shadow: 2px 1px 2px #ffcc00;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
     &__header-img {
         position: relative;
@@ -61,12 +70,23 @@ $style: "section";
         min-height: 561px;
     }
     &__slider-img-wrapper {
+        display: flex;
+        max-width: 390px;
+        max-height: 390px;
         position: relative;
+        border: 1px solid $header-title-color;
+        figure {
+            overflow: hidden;
+        }
         img {
             position: relative;
             @include position();
             object-fit: cover;
-            border: 1px solid $header-title-color;
+            transition: 1s;
+            &:hover {
+                transform: scale(1.3);
+                cursor: all-scroll;
+            }
         }
         &::before,
         &::after {
@@ -88,6 +108,7 @@ $style: "section";
         }
     }
     &__slider-img {
+        display: flex;
         position: relative;
         &::before,
         &::after {
@@ -111,9 +132,9 @@ $style: "section";
     }
     &__slider-description {
         @include flex(center, center, column);
-        text-align: center;
         width: calc(100% / 2 - 15px);
         min-height: 561px;
+        text-align: center;
     }
     &__slider-title {
         display: block;
@@ -126,7 +147,7 @@ $style: "section";
             height: 1.5px;
             width: 101px;
             position: absolute;
-            top: 82px;
+            top: 83px;
             left: calc(50% - 50px);
             background: $header-title-color;
         }
@@ -150,10 +171,16 @@ $style: "section";
         }
         a {
             display: inline-block;
+            svg {
+                transition: all 0.5s ease;
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
         }
     }
     &__slider-text-wrapper {
-        max-width: 416px;
+        max-width: 410px;
         margin-bottom: 50px;
         position: relative;
         &::before,
@@ -184,7 +211,7 @@ $style: "section";
             height: 4px;
             background-color: $header-title-color;
             bottom: -27px;
-            right: 47.5%;
+            right: 47.3%;
         }
     }
     &__slider-button {
@@ -198,6 +225,19 @@ $style: "section";
         transition: background-color 0.3s ease-in;
         &:hover {
             background-color: $header-title-color;
+        }
+    }
+    @keyframes reveal {
+        80% {
+            letter-spacing: 8px;
+        }
+        100% {
+            background-size: 300% 300%;
+        }
+    }
+    @keyframes glow {
+        40% {
+            text-shadow: 0 0 8px #fff;
         }
     }
 }
