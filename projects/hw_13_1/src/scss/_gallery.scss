@@ -13,7 +13,7 @@ $style: "gallery";
         margin-bottom: 9px;
         @include transition();
         &:hover {
-            opacity: 0.6;
+            filter: blur(1px);
         }
         &:nth-child(1) {
             background-image: url("../img/topworkz.jpeg");

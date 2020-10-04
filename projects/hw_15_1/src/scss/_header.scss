@@ -1,0 +1,189 @@
+$style: "header";
+.#{$style} {
+    min-height: 100vh;
+    background: url("../img/header_bg.png") no-repeat center;
+    background-color: $header-bg-color;
+    background-size: auto;
+    padding: 50px 0 68px;
+    position: relative;
+    &__container {
+        min-height: 100vh;
+    }
+    &__nav {
+        @include flex(space-between,
+        stretch,
+        row);
+        margin-bottom: 258px;
+    }
+    &__logo {
+        font-family: $title-font;
+        @include text($header-logo-size,
+        400,
+        $dark-color);
+        animation-play-state: paused;
+        &:hover {
+            animation: text-shadow 1.5s ease-in-out infinite;
+        }
+    }
+    &__list {
+        @include flex(flex-start,
+        center,
+        row);
+    }
+    &__item {
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        @include text($header-nav-title,
+        700,
+        $dark-color);
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        @include transition(opacity);
+        &::after {
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            content: "";
+            background-color: $header-btn-color;
+            height: 3px;
+            transition: width 0.3s ease-in-out;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+    }
+    &__description {
+        @include flex(flex-start,
+        start,
+        column);
+        max-width: calc(100% / 3);
+    }
+    &__title {
+        @include text($header-title-size,
+        900,
+        $dark-color);
+        margin-bottom: 34px;
+    }
+    &__text {
+        @include text($text-size,
+        300,
+        $dark-color);
+        line-height: 1.59;
+        margin-bottom: 31px;
+    }
+    &__btn {
+        @include text($btn-size,
+        300,
+        $light-color);
+        background-color: $header-btn-color;
+        padding: 20px 25px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+        transition: 0.7s;
+        &:hover {
+            box-shadow: 0 0 0 1px $light-color, 0 0 0 2px $header-btn-color, 0 0 0 5px $header-btn-color, 0 0 0 6.5px $light-color, 0 0 0 7px $header-btn-color;
+            border-radius: 100px;
+            background: none;
+            color: $header-btn-color;
+        }
+    }
+    &__scroll {
+        content: "";
+        position: absolute;
+        right: 50%;
+        bottom: 120px;
+        animation: pulsing 2s infinite;
+        &:hover {
+            animation: none;
+            transition: opacity 0.2s ease-out;
+        }
+        &:hover svg {
+            opacity: 0.1;
+        }
+    }
+    &__scroll:hover &__arrow {
+        visibility: visible;
+    }
+    &__arrow {
+        visibility: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        span {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-bottom: 4px solid $header-btn-color;
+            border-right: 4px solid $header-btn-color;
+            transform: rotate(45deg);
+            margin: -10px;
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
+            animation: animate 2s infinite;
+            span:nth-child(2) {
+                animation-delay: -0.2s;
+            }
+        }
+    }
+    @keyframes text-shadow {
+        0% {
+            transform: translateY(0);
+            text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+        }
+        20% {
+            transform: translateY(-1em);
+            text-shadow: 0 0.125em 0 #0c2ffb, 0 0.25em 0 #2cfcfd, 0 -0.125em 0 #fb203b, 0 -0.25em 0 #fefc4b;
+        }
+        40% {
+            transform: translateY(0.5em);
+            text-shadow: 0 -0.0625em 0 #0c2ffb, 0 -0.125em 0 #2cfcfd, 0 0.0625em 0 #fb203b, 0 0.125em 0 #fefc4b;
+        }
+        60% {
+            transform: translateY(-0.25em);
+            text-shadow: 0 0.03125em 0 #0c2ffb, 0 0.0625em 0 #2cfcfd, 0 -0.03125em 0 #fb203b, 0 -0.0625em 0 #fefc4b;
+        }
+        80% {
+            transform: translateY(0);
+            text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+        }
+    }
+    @keyframes pulsing {
+        0% {
+            opacity: 0.1;
+        }
+        50% {
+            opacity: 0.9;
+        }
+        100% {
+            opacity: 0.1;
+        }
+    }
+    @keyframes animate {
+        0% {
+            opacity: 0;
+            transform: rotate(45deg) translate(-20px, -20px);
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: rotate(45deg) translate(20px, 20px);
+        }
+    }
+}

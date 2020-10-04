@@ -1,0 +1,120 @@
+$style: "contact";
+.#{$style} {
+    background: url("../img/contact_bg_img.jpg") no-repeat center;
+    background-size: cover;
+    padding: 100px 0 100px;
+    &__container {
+        text-align: center;
+    }
+    &__title {
+        margin-bottom: 48px;
+    }
+    &__text {
+        max-width: 350px;
+        margin: auto;
+        margin-bottom: 46px;
+        line-height: 1.47;
+    }
+    &__form-wrapper {
+        @include flex(space-between,
+        stretch);
+    }
+    &__form {
+        @include flex(flex-start,
+        stretch,
+        column);
+        max-width: 500px;
+        width: calc(100% / 2);
+    }
+    &__input {
+        background-color: rgba($contact-form-color, 0.5);
+        border: none;
+        outline: none;
+        padding: 15px 0 15px 20px;
+        margin-bottom: 15px;
+        @include transition();
+        &::placeholder {
+            @include text($section-small-size,
+            300,
+            $light-color);
+        }
+        &:focus,
+        &:hover {
+            border-left: 5px solid $contact-form-focus;
+            &::placeholder {
+                font-weight: 700;
+            }
+        }
+    }
+    &__textarea {
+        background-color: rgba($contact-form-color, 0.5);
+        padding: 20px;
+        border: none;
+        outline: none;
+        resize: none;
+        margin-bottom: 15px;
+        @include transition();
+        &::placeholder {
+            @include text($section-small-size,
+            300,
+            $light-color);
+        }
+        &:focus,
+        &:hover {
+            border-left: 5px solid $contact-form-focus;
+            &::placeholder {
+                font-weight: 700;
+            }
+        }
+    }
+    &__btn-wrapper {
+        @include flex(center,
+        center);
+    }
+    &__btn {
+        padding: 20px 100px;
+        background-color: rgba($contact-form-color, 0.2);
+        @include transition();
+        &:hover {
+            background: darken($contact-form-color, 10%);
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+            transform: translate3d(0, -0.5px, 0);
+            font-weight: 700;
+            border-left: 5px solid darken($contact-form-focus, 10%);
+        }
+        &:active {
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+            transform: translate3d(0, 1px, 0);
+        }
+    }
+    &__col {
+        @include flex(flex-start,
+        flex-start,
+        column);
+        width: calc(100% / 2.4);
+        text-align: left;
+        a,
+        span {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+    }
+    &__address,
+    &__email,
+    &__phone-number {
+        cursor: pointer;
+        margin-bottom: 15px;
+        transition: all 0.5s ease;
+        &:hover {
+            transform: scale(1.2);
+            background-color: rgba($dark-color, 0.1);
+        }
+    }
+    span {
+        &:nth-of-type(odd) {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+    }
+}

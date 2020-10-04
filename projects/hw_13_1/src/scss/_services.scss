@@ -7,41 +7,10 @@ $style: "services";
     max-width: 100%;
     padding: 127px 0 110px;
     &__container {
-        max-width: 900px;
         text-align: center;
-        border-right: 2px solid $white-color;
-        border-left: 2px solid $white-color;
-        border-bottom: 2px solid $white-color;
     }
     &__title {
-        background-color: transparent;
-        @include text($main-title-size,
-        700,
-        $white-color);
-        letter-spacing: 5.44px;
-        text-transform: uppercase;
         margin-bottom: 40px;
-        transform: translate(0, -22px);
-        position: relative;
-        &:before,
-        &:after {
-            content: "";
-            display: inline-block;
-            height: 2px;
-            width: 100%;
-            max-width: 243px;
-            background-color: $white-color;
-            position: absolute;
-            bottom: 40%;
-        }
-        &:before {
-            left: 0;
-            transform: translateY(-50%) translateX(-0.7%);
-        }
-        &:after {
-            right: 0;
-            transform: translateY(-50%) translateX(0.7%);
-        }
     }
     &__text-wrapper {
         padding: 0 174px 30px 182px;

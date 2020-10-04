@@ -1,0 +1,44 @@
+$style: "subscribe";
+.#{$style} {
+    background: url("../img/subscribe_bg_img.png") no-repeat center;
+    background-size: cover;
+    padding: 145px 0 163px;
+    &__title {
+        @include text($subscribe-title-size,
+        700,
+        $dark-color);
+        margin-bottom: 34px;
+    }
+    &__text {
+        max-width: 545px;
+        margin-bottom: 30px;
+    }
+    &__input {
+        max-width: 570px;
+        width: 100%;
+        padding: 18px 0 18px 15px;
+        margin-right: 30px;
+        outline: none;
+        border: 1px solid $dark-color;
+        @include transition();
+        &:hover,
+        &:focus {
+            border: 1px solid $subscribe-btn-color;
+        }
+    }
+    &__btn {
+        padding: 16px 30px;
+        background-color: $subscribe-btn-color;
+        @include transition();
+        &:hover {
+            background: rgba(darken($subscribe-btn-color, 10%), 0.9);
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+            transform: translate3d(0, -0.5px, 0);
+            color: $light-color;
+        }
+        &:active {
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+            transform: translate3d(0, 1px, 0);
+        }
+    }
+}

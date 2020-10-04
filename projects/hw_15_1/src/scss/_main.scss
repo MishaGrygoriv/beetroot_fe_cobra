@@ -1,0 +1,68 @@
+$style: "main";
+.#{$style} {
+    &__title {
+        @include text($section-title, 700, $light-color);
+        &--dark {
+            @include text($section-title, 700, $dark-color);
+        }
+    }
+    &__text {
+        @include text($text-size, 300, $light-color);
+        line-height: 1.59;
+        &--dark {
+            @include text($text-size, 300, $dark-color);
+            line-height: 1.59;
+        }
+    }
+    &__btn {
+        @include text($btn-size, 300, $light-color);
+        box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        padding: 20px 43px;
+    }
+    &__pulse {
+        position: relative;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+            margin: auto;
+        }
+        &:before {
+            animation: pulse 1.5s infinite linear;
+        }
+        &:after {
+            animation: pulse 2s 0.4s infinite linear;
+        }
+        &:hover:before,
+        &:hover:after {
+            display: none;
+        }
+    }
+    @keyframes pulse {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        33% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(3);
+            opacity: 0;
+        }
+    }
+}

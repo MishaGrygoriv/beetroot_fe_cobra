@@ -1,0 +1,72 @@
+$style: "our-services";
+.#{$style} {
+    background-color: $services-bg-color;
+    &__container {
+        @include flex(space-around, center);
+        background: url("../img/services_img.png") no-repeat;
+        background-position: bottom 60% right 8%;
+        padding: 180px 0 150px;
+    }
+    &__list {
+        @include transition();
+    }
+    &__list:hover &__item {
+        filter: blur(3px);
+        opacity: 0.5;
+    }
+    &__list:hover &__item:hover {
+        filter: blur(0px);
+        opacity: 1;
+    }
+    &__item {
+        max-width: 400px;
+        @include flex(stretch,
+        stretch,
+        column);
+        background-color: $light-color;
+        box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
+        margin-bottom: 20px;
+        @include transition();
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover {
+            transform: scale(0.8);
+        }
+        &:hover svg {
+            transform: translateX(-150px);
+        }
+    }
+    &__item:hover &__text {
+        color: white;
+    }
+    &__item:hover &__icon {
+        border: none;
+    }
+    &__link {
+        @include flex();
+        min-height: 100px;
+    }
+    &__text {
+        @include text($btn-size,
+        700,
+        $dark-color);
+        @include flex(center,
+        center);
+        flex: 1;
+        text-align: center;
+        @include transition();
+    }
+    &__icon {
+        @include flex(center,
+        center);
+        border-left: 1px solid $black-color;
+        min-width: 100px;
+        svg {
+            @include transition();
+        }
+    }
+    &__title {
+        padding-bottom: 80px;
+    }
+}

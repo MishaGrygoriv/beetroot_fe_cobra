@@ -1,0 +1,20 @@
+$style: "about-us";
+.#{$style} {
+    background-image: radial-gradient(circle at 0 0, #00c4c4, #00b7b7, #00adad, #009c9c), linear-gradient(to bottom, #00c4c4, #00c4c4);
+    padding: 70px 0;
+    &__container {
+        @include flex(space-between, center);
+    }
+    &__description {
+        max-width: 500px;
+    }
+    &__title {
+        margin-bottom: 15px;
+    }
+    &__text {
+        display: block;
+        &--space {
+            margin-bottom: 27px;
+        }
+    }
+}

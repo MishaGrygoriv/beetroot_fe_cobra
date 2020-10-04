@@ -11,7 +11,7 @@ $style: "header";
         margin-bottom: 75px;
     }
     &__title {
-        @include text($header-title-size,
+        @include text($contact-us-size,
         700,
         $white-color);
         max-width: 600px;
@@ -22,9 +22,12 @@ $style: "header";
         span {
             display: block;
         }
+        @media screen and (min-width: 576px) {
+            font-size: $header-title-size;
+        }
     }
     &__text {
-        @include text($header-text-size,
+        @include text($header-text-size-mobile,
         400,
         $white-color);
         max-width: 600px;
@@ -35,6 +38,9 @@ $style: "header";
         letter-spacing: 1.1px;
         span {
             display: block;
+        }
+        @media screen and (min-width: 576px) {
+            font-size: $header-text-size;
         }
     }
     &__scroll {

@@ -60,4 +60,13 @@ $style: "what-we-do";
         @include text($section-text-size, 300, $text-color);
         line-height: 1.85;
     }
+    svg {
+        &:hover {
+            cursor: pointer;
+            border-color: transparent;
+            filter: blur(1px);
+            transform: scale(1.2);
+            transition: 1000ms transform ease, 2100ms blur ease, 900ms border-color ease;
+        }
+    }
 }
