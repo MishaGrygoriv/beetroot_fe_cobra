@@ -39,7 +39,7 @@ $style: "contact-us";
         color: $white-color;
         text-transform: uppercase;
         cursor: pointer;
-        @include transition();
+        @include transition(background-color);
         @media screen and (min-width: 576px) {
             max-width: 300px;
             padding: 20px 0;

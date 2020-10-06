@@ -79,9 +79,15 @@ $style: "header";
         rgba($white-color, 0.8));
         text-transform: uppercase;
         position: absolute;
-        bottom: 20px;
+        bottom: 7px;
         opacity: 0;
         transition: 1s ease;
+        @media screen and (min-width: 576px) {
+            bottom: 10px;
+        }
+        @media screen and (min-width: 960px) {
+            bottom: 20px;
+        }
     }
 }
 
