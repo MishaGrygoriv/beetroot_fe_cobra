@@ -4,27 +4,50 @@ $style: "contact-us";
     @include flex(center, center, column);
     padding: 134px 0 0;
     &__text-wrapper {
-        padding: 0 180px 50px;
+        padding: 0 30px 30px;
+        @media screen and (min-width: 576px) {
+            padding: 0 50px 25px;
+        }
+        @media screen and (min-width: 960px) {
+            padding: 0 180px 50px;
+        }
     }
     &__text {
-        @include text($main-text-size, 300, $text-color);
+        @include text($header-text-size-mobile, 300, $text-color);
         line-height: 1.62;
-        margin-bottom: 41px;
+        margin-bottom: 25px;
         span {
             display: block;
         }
+        @media screen and (min-width: 576px) {
+            margin-bottom: 25px;
+            font-size: $section-title-size;
+        }
+        @media screen and (min-width: 960px) {
+            margin-bottom: 41px;
+            font-size: $main-text-size;
+        }
     }
     &__btn {
-        min-width: 395px;
+        max-width: 200px;
+        width: 100%;
         background-color: $text-color;
         border: none;
         outline: none;
-        padding: 24px 0;
+        padding: 20px 0;
         letter-spacing: 2.56px;
         color: $white-color;
         text-transform: uppercase;
         cursor: pointer;
         @include transition();
+        @media screen and (min-width: 576px) {
+            max-width: 300px;
+            padding: 20px 0;
+        }
+        @media screen and (min-width: 960px) {
+            max-width: 395px;
+            padding: 24px 0;
+        }
         &:hover {
             background-color: rgba($text-color, 0.9);
         }

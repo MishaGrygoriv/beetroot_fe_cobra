@@ -1,36 +1,58 @@
 $style: "main";
 .#{$style} {
     &__container {
-        max-width: 900px;
+        max-width: 345px;
         margin: 0 auto;
         text-align: center;
         border-bottom: 2px solid $text-color;
         border-right: 2px solid $text-color;
         border-left: 2px solid $text-color;
         &--white {
-            max-width: 900px;
+            max-width: 350px;
             border-right: 2px solid $white-color;
             border-left: 2px solid $white-color;
             border-bottom: 2px solid $white-color;
+            @media screen and (min-width: 576px) {
+                max-width: 600px;
+            }
+            @media screen and (min-width: 960px) {
+                max-width: 900px;
+            }
+        }
+        @media screen and (min-width: 576px) {
+            max-width: 600px;
+        }
+        @media screen and (min-width: 960px) {
+            max-width: 900px;
         }
     }
     &__title {
-        transform: translate(0, -22px);
+        transform: translate(0, -15px);
         background-color: $white-color;
-        @include text($main-title-size, 700, $text-color);
+        @include text($main-title-size-mobile, 700, $text-color);
         letter-spacing: 5.44px;
         text-transform: uppercase;
         position: relative;
+        @media screen and (min-width: 576px) {
+            font-size: $main-title-size;
+            transform: translate(0, -22px);
+        }
         &:before,
         &:after {
             content: "";
             width: 100%;
-            max-width: 240px;
+            max-width: 55px;
             height: 2px;
             background-color: $text-color;
             display: inline-block;
             position: absolute;
             top: 53%;
+            @media screen and (min-width: 576px) {
+                max-width: 140px;
+            }
+            @media screen and (min-width: 960px) {
+                max-width: 240px;
+            }
         }
         &:before {
             left: 0px;
@@ -42,21 +64,31 @@ $style: "main";
         }
         &--white-title {
             background-color: transparent;
-            @include text($main-title-size, 700, $white-color);
+            @include text($main-title-size-mobile, 700, $white-color);
             letter-spacing: 5.44px;
             text-transform: uppercase;
-            transform: translate(0, -22px);
+            transform: translate(0, -16px);
             position: relative;
+            @media screen and (min-width: 576px) {
+                font-size: $main-title-size;
+                transform: translate(0, -22px);
+            }
             &:before,
             &:after {
                 content: "";
                 display: inline-block;
                 height: 2px;
                 width: 100%;
-                max-width: 243px;
+                max-width: 70px;
                 background-color: $white-color;
                 position: absolute;
                 bottom: 40%;
+                @media screen and (min-width: 576px) {
+                    max-width: 140px;
+                }
+                @media screen and (min-width: 960px) {
+                    max-width: 240px;
+                }
             }
             &:before {
                 left: 0;

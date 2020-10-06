@@ -1,12 +1,23 @@
 $style: "footer";
 .#{$style} {
-    @include flex(center, center);
-    padding: 63px 0;
+    padding: 60px 0;
+    @media screen and (min-width: 576px) {
+        @include flex(center, center);
+        padding: 63px 0;
+    }
     &__logo {
-        margin-right: 36px;
+        @include flex(center, center);
+        margin-bottom: 25px;
         cursor: pointer;
+        @media screen and (min-width: 576px) {
+            display: block;
+            margin-right: 36px;
+            margin-bottom: 0;
+        }
     }
     &__text {
+        display: block;
+        text-align: center;
         @include text($section-text-size, 400, $text-color);
     }
 }

@@ -2,16 +2,38 @@ $style: "gallery";
 .#{$style} {
     max-width: 100%;
     &__list {
-        @include flex();
+        @include flex(stretch, stretch, column);
         flex-wrap: wrap;
+        @media screen and (min-width: 576px) {
+            @include flex(stretch, stretch);
+            flex-wrap: wrap;
+        }
+        @media screen and (min-width: 960px) {
+            @include flex();
+            flex-wrap: wrap;
+        }
     }
     &__item {
         min-width: 30%;
-        flex-basis: 30%;
+        width: 100%;
         min-height: 237px;
-        margin-right: 10px;
-        margin-bottom: 9px;
+        margin-bottom: 10px;
         @include transition();
+        @media screen and (min-width: 576px) {
+            width: calc(100% / 2 - 5px);
+            min-height: 237px;
+            margin-bottom: 9px;
+            &:nth-child(odd) {
+                margin-right: 10px;
+            }
+        }
+        @media screen and (min-width: 960px) {
+            min-width: 30%;
+            flex-basis: 30%;
+            min-height: 237px;
+            margin-right: 10px;
+            margin-bottom: 9px;
+        }
         &:hover {
             opacity: 0.8;
         }
@@ -40,10 +62,31 @@ $style: "gallery";
             background-size: cover;
         }
         &:nth-child(n+4) {
-            margin-bottom: 0;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @media screen and (min-width: 576px) {
+                margin-bottom: 0;
+            }
+            @media screen and (min-width: 960px) {
+                margin-bottom: 0;
+            }
+        }
+        &:nth-child(4) {
+            margin-bottom: 10px;
+            @media screen and (min-width: 960px) {
+                margin-bottom: 0;
+            }
         }
         &:nth-child(3n) {
             margin-right: 0;
+        }
+        &:nth-child(3) {
+            margin-right: 10px;
+            @media screen and (min-width: 960px) {
+                margin-right: 0;
+            }
         }
         &--large {
             flex-grow: 2;
@@ -59,11 +102,14 @@ $style: "gallery";
         position: absolute;
         top: 169px;
         left: 49px;
-        @include text($main-title-size,
+        @include text($main-title-size-mobile,
         700,
         $white-color);
         text-transform: uppercase;
         letter-spacing: 5.44px;
+        @media screen and (min-width: 576px) {
+            font-size: $main-title-size;
+        }
     }
     &__item:hover &__title {
         color: $text-color;
