@@ -6,41 +6,47 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <title>Cahee</title>
     <link rel="shortcut icon" type="image/x-icon" href="./img/strawberry.png" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <!--Header-->
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__container container">
+            <a href="/" class="nav__logo">
+                Cahee
+            </a>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about-us" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#our-services" class="nav__link">Services</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#gallery" class="nav__link">Gallery</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#blog" class="nav__link">Blog</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navigation End -->
+
+    <!-- Header -->
     <header class="header">
         <div class="header__container container">
-            <nav class="header__nav">
-                <div class="header__logo-wrapper">
-                    <a href="/" class="header__logo">Cahee</a>
-                </div>
-                <ul class="header__list">
-                    <li class="header__item">
-                        <a href="#" class="header__link">Home</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#about-us" class="header__link">About</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#our-services" class="header__link">Services</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#gallery" class="header__link">Gallery</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#blog" class="header__link">Blog</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#contact" class="header__link">Contact</a>
-                    </li>
-                </ul>
-            </nav>
             <div class="header__description">
-                <h2 class="header__title">Fresh Life</h2>
-                <p class="header__text">
+                <h2 data-aos="fade-right" class="header__title">Fresh Life</h2>
+                <p data-aos="fade-right" data-aos-delay="300" class="header__text">
                     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                 </p>
                 <button class="header__btn">GET FREE NOW</button>
@@ -62,32 +68,24 @@
             </a>
         </div>
     </header>
-    <!--Header End-->
+    <!-- Header End -->
 
-    <!--Main-->
+    <!-- Main -->
     <main class="main">
-        <!--About Us Section-->
+        <!-- About Us Section -->
         <section class="about-us">
             <div class="about-us__container container">
                 <div class="about-us__img-wrapper">
                     <img src="./img/about_us_img.png" alt="pic" />
                 </div>
                 <div class="about-us__description">
-                    <!--<h2 class="about-us__title main__title">About Us</h2>-->
-                    <h2 class="about-us__title" id="about-us">
+                    <h2 data-aos="zoom-out-down" class="about-us__title" id="about-us">
                         <svg class="main__title" viewbox="0 0 100 20">
                 <defs>
                   <lineargradient id="gradient">
                     <stop offset color="#000" />
                   </lineargradient>
-                  <pattern
-                    id="wave"
-                    x="0"
-                    y="-0.5"
-                    width="100%"
-                    height="100%"
-                    patternunits="userSpaceOnUse"
-                  >
+                  <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternunits="userSpaceOnUse">
                     <path
                       id="wavePath"
                       d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z"
@@ -106,47 +104,33 @@
                     </path>
                   </pattern>
                 </defs>
-                <text
-                  text-anchor="middle"
-                  x="42"
-                  y="15"
-                  font-size="19"
-                  fill="white"
-                  fill-opacity="0.1"
-                >
+                <text text-anchor="middle" x="42" y="15" font-size="19" fill="white" fill-opacity="0.1">
                   About Us
                 </text>
-                <text
-                  text-anchor="middle"
-                  x="42"
-                  y="15"
-                  font-size="19"
-                  fill="url(#wave)"
-                  fill-opacity="1"
-                >
+                <text text-anchor="middle" x="42" y="15" font-size="19" fill="url(#wave)" fill-opacity="1">
                   About Us
                 </text>
               </svg>
                     </h2>
-                    <span class="about-us__text about-us__text--space main__text">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum.</span
+                    <span data-aos="fade-up" data-aos-delay="300" class="about-us__text about-us__text--space main__text">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum.</span
             >
-            <span class="about-us__text main__text"
-              >Nim id est laborum. Sed ut perspiciatis unde omnis iste natus
-              error sit voluptatem accusantium doloremque laudantium, totam rem
-              aperiam, eaque ipsa quae ab illo inventore.</span
+            <span data-aos="fade-down" data-aos-delay="400" class="about-us__text main__text"
+              >Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+              laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</span
             >
           </div>
         </div>
       </section>
-      <!--About Us Section End-->
+      <!-- About Us Section End -->
 
-      <!--Our Services Section-->
+      <!-- Our Services Section -->
       <section class="our-services" id="our-services">
         <div class="our-services__container container">
-          <ul class="our-services__list">
+          <ul data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1500" class="our-services__list">
             <li class="our-services__item">
               <a href="#" class="our-services__link">
                 <span class="our-services__text">Online Shopping</span>
@@ -186,9 +170,8 @@
                     </li>
                     <li class="our-services__item">
                         <a href="#" class="our-services__link">
-                            <span class="our-services__text">Domestic & International Delivery</span
-                >
-                <span class="our-services__icon">
+                            <span class="our-services__text">Domestic & International Delivery</span>
+                            <span class="our-services__icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -224,49 +207,49 @@
                         </a>
                     </li>
                     </ul>
-                    <h2 class="our-services__title main__title">Our Services</h2>
+                    <h2 data-aos="flip-up" data-aos-delay="300" class="our-services__title main__title">Our Services</h2>
                 </div>
         </section>
-        <!--Our Services Section End-->
+        <!-- Our Services Section End -->
 
-        <!--Gallery Section-->
+        <!-- Gallery Section -->
         <section class="gallery" id="gallery">
             <div class="gallery__container container">
-                <h2 class="gallery__title main__title--dark">Gallery</h2>
-                <p class="gallery__text main__text--dark">
+                <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" class="gallery__title main__title--dark">Gallery</h2>
+                <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" data-aos-delay="300" class="gallery__text main__text--dark">
                     Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="gallery__img-first-col">
-                    <div class="gallery__img-big-wrapper">
+                    <div data-aos="zoom-in-right" class="gallery__img-big-wrapper">
                         <img src="./img/gallery_1.png" alt="pic" class="gallery__img" />
                     </div>
                     <div class="gallery__img-small-container">
-                        <div class="gallery__img-small-wrapper">
+                        <div data-aos="zoom-in-left" data-aos-delay="300" class="gallery__img-small-wrapper">
                             <img src="./img/gallery_2.png" alt="pic" class="gallery__img" />
                         </div>
-                        <div class="gallery__img-small-wrapper">
+                        <div data-aos="zoom-in-left" data-aos-delay="300" class="gallery__img-small-wrapper">
                             <img src="./img/gallery_3.png" alt="pic" class="gallery__img" />
                         </div>
                     </div>
                 </div>
                 <div class="gallery__img-second-col">
-                    <div class="gallery__img-middle-wrapper">
+                    <div data-aos="zoom-out-up" class="gallery__img-middle-wrapper">
                         <img src="./img/gallery_4.png" alt="pic" class="gallery__img" />
                     </div>
-                    <div class="gallery__img-middle-wrapper">
+                    <div data-aos="zoom-out-up" data-aos-delay="200" class="gallery__img-middle-wrapper">
                         <img src="./img/gallery_5.png" alt="pic" class="gallery__img" />
                     </div>
                 </div>
                 <button class="gallery__btn main__btn">VIEW MORE</button>
             </div>
         </section>
-        <!--Gallery Section End-->
+        <!-- Gallery Section End -->
 
-        <!--Subscribe Section-->
+        <!-- Subscribe Section -->
         <section class="subscribe">
             <div class="subscribe__container container">
-                <h3 class="subscribe__title main__title--dark">Subscribe To Us</h3>
-                <p class="subscribe__text main__text--dark">
+                <h3 data-aos="flip-up" class="subscribe__title main__title--dark">Subscribe To Us</h3>
+                <p data-aos="flip-down" data-aos-delay="200" class="subscribe__text main__text--dark">
                     Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                 </p>
                 <form action="#" class="subscribe__form" method="get">
@@ -277,17 +260,17 @@
                 </form>
             </div>
         </section>
-        <!--Subscribe Section-->
+        <!-- Subscribe Section -->
 
-        <!--Blog Section-->
+        <!-- Blog Section -->
         <section class="blog" id="blog">
             <div class="blog__container container">
-                <h2 class="blog__title main__title">Blog</h2>
-                <p class="blog__text main__text">
+                <h2 data-aos="zoom-in-down" class="blog__title main__title">Blog</h2>
+                <p data-aos="zoom-out" data-aos-delay="300" class="blog__text main__text">
                     Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
                 </p>
                 <ul class="blog__list">
-                    <li class="blog__item">
+                    <li data-aos="zoom-in-left" class="blog__item">
                         <a href="#" class="blog__link">
                             <div class="blog__img-wrapper">
                                 <img class="blog__img" src="./img/blog_img_1.png" alt="img_1" />
@@ -300,146 +283,103 @@
                                 <h3 class="blog__description-title">
                                     Green Smoothies: Too Much of a Good Thing?
                                 </h3>
-                                <span class="blog__description-subtitle">By Auskteez - 2 hours ago</span
-                  >
-                </div>
-              </a>
-            </li>
-            <li class="blog__item">
-              <a href="#" class="blog__link">
-                <div class="blog__img-wrapper">
-                  <img
-                    class="blog__img"
-                    src="./img/blog_img_2.png"
-                    alt="img_2"
-                  />
-                </div>
-                <div class="blog__date">
-                  <div class="blog__date-day">14</div>
-                  <div class="blog__date-month">NOV</div>
-                </div>
-                <div class="blog__description">
-                  <h3 class="blog__description-title">
-                    Growing Food and a “Thirst” for Innovation
-                  </h3>
-                  <span class="blog__description-subtitle"
-                    >By Auskteez - 3 hours ago</span
-                  >
-                </div>
-              </a>
-            </li>
-            <li class="blog__item">
-              <a href="#" class="blog__link">
-                <div class="blog__img-wrapper">
-                  <img
-                    class="blog__img"
-                    src="./img/blog_img_3.png"
-                    alt="img_3"
-                  />
-                </div>
-                <div class="blog__date">
-                  <div class="blog__date-day">10</div>
-                  <div class="blog__date-month">NOV</div>
-                </div>
-                <div class="blog__description">
-                  <h3 class="blog__description-title">
-                    Pesticides & Food: What You Need
-                    <span>to Know</span>
-                                </h3>
-                                <span class="blog__description-subtitle">By Auskteez - 6 hours ago</span
-                  >
-                </div>
-              </a>
-            </li>
-          </ul>
-          <button class="blog__btn main__btn">VIEW MORE</button>
-        </div>
-      </section>
-      <!--Blog Section End-->
-
-      <!--Contact Section-->
-      <section class="contact" id="contact">
-        <div class="contact__container container">
-          <h2 class="contact__title main__title--dark">Contact</h2>
-          <p class="contact__text main__text--dark">
-            For new projects, ideas, business or anything you'd like to discuss,
-            contact with me!
-          </p>
-          <div class="contact__form-wrapper">
-            <form class="contact__form">
-              <input
-                type="text"
-                required
-                class="contact__input"
-                placeholder="Auskteez Tran"
-                id="name"
-                name="name"
-              />
-              <input
-                type="email"
-                required
-                class="contact__input"
-                placeholder="Your email..."
-                id="@email"
-                name="email"
-              />
-              <input
-                type="text"
-                required
-                class="contact__input"
-                placeholder="Your phone number..."
-                id="phone"
-                name="phone"
-              />
-              <textarea
-                class="contact__textarea"
-                name="textarea"
-                id="textarea"
-                cols="30"
-                rows="17"
-                placeholder="Your message..."
-              ></textarea>
-              <div class="contact__btn-wrapper">
-                <button
-                  type="submit"
-                  class="contact__btn main__btn main__pulse"
-                >
-                  SEND
-                </button>
-              </div>
-            </form>
-            <div class="contact__col">
-              <address class="contact__address">
-                <span>ADDRESS</span>
-                                <span>123 City name, Street, City, Country</span>
-                                </address>
-                                <a href="mailto:test@test.com" class="contact__email">
-                                    <span>EMAIL</span>
-                                    <span>cahee@domain.com</span>
-                                </a>
-                                <a href="tel:+" class="contact__phone-number">
-                                    <span>PHONE</span>
-                                    <span>+012 345 6789</span>
-                                </a>
+                                <span class="blog__description-subtitle">By Auskteez - 2 hours ago</span>
                             </div>
-            </div>
+                        </a>
+                    </li>
+                    <li data-aos="flip-down" data-aos-delay="500" class="blog__item">
+                        <a href="#" class="blog__link">
+                            <div class="blog__img-wrapper">
+                                <img class="blog__img" src="./img/blog_img_2.png" alt="img_2" />
+                            </div>
+                            <div class="blog__date">
+                                <div class="blog__date-day">14</div>
+                                <div class="blog__date-month">NOV</div>
+                            </div>
+                            <div class="blog__description">
+                                <h3 class="blog__description-title">
+                                    Growing Food and a “Thirst” for Innovation
+                                </h3>
+                                <span class="blog__description-subtitle">By Auskteez - 3 hours ago</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li data-aos="zoom-in-right" data-aos-delay="200" class="blog__item">
+                        <a href="#" class="blog__link">
+                            <div class="blog__img-wrapper">
+                                <img class="blog__img" src="./img/blog_img_3.png" alt="img_3" />
+                            </div>
+                            <div class="blog__date">
+                                <div class="blog__date-day">10</div>
+                                <div class="blog__date-month">NOV</div>
+                            </div>
+                            <div class="blog__description">
+                                <h3 class="blog__description-title">
+                                    Pesticides & Food: What You Need
+                                    <span>to Know</span>
+                                </h3>
+                                <span class="blog__description-subtitle">By Auskteez - 6 hours ago</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <button class="blog__btn main__btn">VIEW MORE</button>
             </div>
         </section>
-        <!--Contact Section End-->
-    </main>
-    <!--Main End-->
+        <!-- Blog Section End -->
 
-    <!--Footer-->
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="contact__container container">
+                <h2 data-aos="fade-down-right" class="contact__title main__title--dark">Contact</h2>
+                <p data-aos="fade-down-left" data-aos-delay="100" class="contact__text main__text--dark">
+                    For new projects, ideas, business or anything you'd like to discuss, contact with me!
+                </p>
+                <div class="contact__form-wrapper">
+                    <form class="contact__form">
+                        <input type="text" required class="contact__input" placeholder="Auskteez Tran" id="name" name="name" />
+                        <input type="email" required class="contact__input" placeholder="Your email..." id="@email" name="email" />
+                        <input type="text" required class="contact__input" placeholder="Your phone number..." id="phone" name="phone" />
+                        <textarea class="contact__textarea" name="textarea" id="textarea" cols="30" rows="17" placeholder="Your message..."></textarea>
+                        <div class="contact__btn-wrapper">
+                            <button type="submit" class="contact__btn main__btn main__pulse">
+                  SEND
+                </button>
+                        </div>
+                    </form>
+                    <div data-aos="flip-up" data-aos-delay="500" class="contact__col">
+                        <address class="contact__address">
+                <span>ADDRESS</span>
+                <span>123 City name, Street, City, Country</span>
+              </address>
+                        <a href="mailto:test@test.com" class="contact__email">
+                            <span>EMAIL</span>
+                            <span>cahee@domain.com</span>
+                        </a>
+                        <a href="tel:+" class="contact__phone-number">
+                            <span>PHONE</span>
+                            <span>+012 345 6789</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+    </main>
+    <!-- Main End -->
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer__container container">
             <span class="footer__text">© 2015 Company. All right reserved.</span>
             <a href="/" class="footer__logo">Cahee</a>
-            <span class="footer__text">Made with
-          <span class="footer__text footer__text--love">love</span> by Auskteez
+            <span class="footer__text">Made with <span class="footer__text footer__text--love">love</span> by Auskteez
             </span>
         </div>
     </footer>
-    <!--Footer End-->
+    <!-- Footer End -->
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/bundle.js"></script>
 </body>
 

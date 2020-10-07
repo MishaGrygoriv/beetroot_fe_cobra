@@ -58,7 +58,7 @@ $style: "gallery";
         height: 100%;
         object-fit: cover;
         cursor: move;
-        transition: 0.3s ease-in-out;
+        transition: 0.5s;
         &:hover {
             transform: scale(1.1);
         }
@@ -71,6 +71,7 @@ $style: "gallery";
             border-radius: 100px;
             background: $light-color;
             color: $gallery-btn-color;
+            font-weight: 700;
         }
     }
 }

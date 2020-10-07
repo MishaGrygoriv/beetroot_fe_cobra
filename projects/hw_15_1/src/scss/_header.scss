@@ -4,71 +4,17 @@ $style: "header";
     background: url("../img/header_bg.png") no-repeat center;
     background-color: $header-bg-color;
     background-size: auto;
-    padding: 50px 0 68px;
+    padding: 150px 0 68px;
     position: relative;
     &__container {
         min-height: 100vh;
-    }
-    &__nav {
-        @include flex(space-between,
-        stretch,
-        row);
-        margin-bottom: 258px;
-    }
-    &__logo {
-        font-family: $title-font;
-        @include text($header-logo-size,
-        400,
-        $dark-color);
-        animation-play-state: paused;
-        &:hover {
-            animation: text-shadow 1.5s ease-in-out infinite;
-        }
-    }
-    &__list {
-        @include flex(flex-start,
-        center,
-        row);
-    }
-    &__item {
-        margin-right: 40px;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-    &__link {
-        @include text($header-nav-title,
-        700,
-        $dark-color);
-        text-transform: uppercase;
-        cursor: pointer;
-        position: relative;
-        display: inline-block;
-        @include transition(opacity);
-        &::after {
-            position: absolute;
-            top: -10px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 0%;
-            content: "";
-            background-color: $header-btn-color;
-            height: 3px;
-            transition: width 0.3s ease-in-out;
-        }
-        &:hover {
-            opacity: 0.8;
-        }
-        &:hover::after {
-            width: 100%;
-        }
     }
     &__description {
         @include flex(flex-start,
         start,
         column);
         max-width: calc(100% / 3);
+        padding-top: 150px;
     }
     &__title {
         @include text($header-title-size,
@@ -100,14 +46,21 @@ $style: "header";
             border-radius: 100px;
             background: none;
             color: $header-btn-color;
+            font-weight: 700;
         }
     }
     &__scroll {
         content: "";
         position: absolute;
         right: 50%;
-        bottom: 120px;
+        bottom: 280px;
         animation: pulsing 2s infinite;
+        @media screen and (min-width: 576px) {
+            bottom: 240px;
+        }
+        @media screen and (min-width: 1440px) {
+            bottom: 230px;
+        }
         &:hover {
             animation: none;
             transition: opacity 0.2s ease-out;
@@ -133,33 +86,11 @@ $style: "header";
             border-right: 4px solid $header-btn-color;
             transform: rotate(45deg);
             margin: -10px;
-            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2);
             animation: animate 2s infinite;
             span:nth-child(2) {
                 animation-delay: -0.2s;
             }
-        }
-    }
-    @keyframes text-shadow {
-        0% {
-            transform: translateY(0);
-            text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
-        }
-        20% {
-            transform: translateY(-1em);
-            text-shadow: 0 0.125em 0 #0c2ffb, 0 0.25em 0 #2cfcfd, 0 -0.125em 0 #fb203b, 0 -0.25em 0 #fefc4b;
-        }
-        40% {
-            transform: translateY(0.5em);
-            text-shadow: 0 -0.0625em 0 #0c2ffb, 0 -0.125em 0 #2cfcfd, 0 0.0625em 0 #fb203b, 0 0.125em 0 #fefc4b;
-        }
-        60% {
-            transform: translateY(-0.25em);
-            text-shadow: 0 0.03125em 0 #0c2ffb, 0 0.0625em 0 #2cfcfd, 0 -0.03125em 0 #fb203b, 0 -0.0625em 0 #fefc4b;
-        }
-        80% {
-            transform: translateY(0);
-            text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
         }
     }
     @keyframes pulsing {
@@ -176,14 +107,14 @@ $style: "header";
     @keyframes animate {
         0% {
             opacity: 0;
-            transform: rotate(45deg) translate(-20px, -20px);
+            transform: rotate(45deg) translate(-15px, -15px);
         }
         50% {
             opacity: 1;
         }
         100% {
             opacity: 0;
-            transform: rotate(45deg) translate(20px, 20px);
+            transform: rotate(45deg) translate(15px, 15px);
         }
     }
 }

@@ -10,7 +10,6 @@ $style: "footer";
         &--love {
             display: inline-block;
             color: $footer-love-color;
-            cursor: pointer;
             animation: beatHeart 1s infinite;
             @include transition();
             &:hover {
