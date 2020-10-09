@@ -1,15 +1,67 @@
 $style: "about-us";
 .#{$style} {
     background-image: radial-gradient(circle at 0 0, #00c4c4, #00b7b7, #00adad, #009c9c), linear-gradient(to bottom, #00c4c4, #00c4c4);
-    padding: 70px 0;
+    padding: 50px 0;
+    @media screen and (min-width: 576px) {
+        padding: 70px 0;
+    }
     &__container {
-        @include flex(space-between, center);
+        @include flex(center, center, column);
+        @media screen and (min-width: 576px) {
+            @include flex(center, center, column);
+        }
+        @media screen and (min-width: 768px) {
+            @include flex(center, center, column);
+        }
+        @media screen and (min-width: 1024px) {
+            @include flex(space-between, center);
+        }
+    }
+    &__img-wrapper {
+        text-align: center;
+        @media screen and (min-width: 576px) {
+            position: relative;
+        }
+        @media screen and (min-width: 768px) {
+            position: relative;
+        }
+        @media screen and (min-width: 1024px) {
+            position: relative;
+            width: 100%;
+            padding-bottom: 47%;
+            max-width: 566px;
+        }
+        img {
+            position: relative;
+            @include position();
+            width: 80%;
+            height: 100%;
+            object-fit: cover;
+            @media screen and (min-width: 576px) {
+                position: relative;
+                width: 50%;
+            }
+            @media screen and (min-width: 768px) {
+                position: relative;
+                width: 50%;
+            }
+            @media screen and (min-width: 1024px) {
+                position: absolute;
+                width: 100%;
+            }
+        }
     }
     &__description {
-        max-width: 500px;
+        max-width: 300px;
+        @media screen and (min-width: 576px) {
+            max-width: 500px;
+        }
     }
     &__title {
-        margin-bottom: 15px;
+        margin-bottom: 0;
+        @media screen and (min-width: 576px) {
+            margin-bottom: 15px;
+        }
     }
     &__text {
         display: block;

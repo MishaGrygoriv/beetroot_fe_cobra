@@ -2,10 +2,36 @@ $style: "our-services";
 .#{$style} {
     background-color: $services-bg-color;
     &__container {
-        @include flex(space-around, center);
+        @include flex(center, center, column-reverse);
         background: url("../img/services_img.png") no-repeat;
-        background-position: bottom 60% right 8%;
-        padding: 180px 0 150px;
+        padding: 50px 0;
+        background-position: bottom 22% right 0;
+        background-size: 100%;
+        @media screen and (min-width: 576px) {
+            padding: 50px 0;
+            background-position: bottom 22% right 0;
+            background-size: 60%;
+            background-position-x: center;
+            @include flex(center,
+            center,
+            column-reverse);
+        }
+        @media screen and (min-width: 768px) {
+            padding: 50px 0;
+            background-position: bottom 22% right 0;
+            background-size: 60%;
+            background-position-x: center;
+            @include flex(center,
+            center,
+            column-reverse);
+        }
+        @media screen and (min-width: 1024px) {
+            background-position: bottom 60% right 8%;
+            background-size: 39.5%;
+            padding: 180px 0 150px;
+            @include flex(space-around,
+            center);
+        }
     }
     &__list {
         @include transition(opacity);
@@ -19,7 +45,8 @@ $style: "our-services";
         opacity: 1;
     }
     &__item {
-        max-width: 400px;
+        max-width: 252px;
+        padding-left: 5px;
         @include flex(stretch,
         stretch,
         column);
@@ -27,6 +54,10 @@ $style: "our-services";
         box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
         margin-bottom: 20px;
         transition: all 0.5s ease;
+        @media screen and (min-width: 576px) {
+            max-width: 400px;
+            padding-left: 0;
+        }
         &:last-child {
             margin-bottom: 0;
         }
@@ -37,7 +68,10 @@ $style: "our-services";
             transition: 0.1s;
         }
         &:hover svg {
-            transform: translateX(-150px);
+            transform: translateX(-75px);
+            @media screen and (min-width: 576px) {
+                transform: translateX(-150px);
+            }
         }
     }
     &__item:hover &__text {
@@ -48,7 +82,10 @@ $style: "our-services";
     }
     &__link {
         @include flex();
-        min-height: 100px;
+        min-height: 80px;
+        @media screen and (min-width: 576px) {
+            min-height: 100px;
+        }
     }
     &__text {
         @include text($btn-size,
@@ -70,6 +107,10 @@ $style: "our-services";
         }
     }
     &__title {
-        padding-bottom: 80px;
+        margin-bottom: 20px;
+        @media screen and (min-width: 576px) {
+            padding-bottom: 80px;
+            margin-bottom: 0;
+        }
     }
 }

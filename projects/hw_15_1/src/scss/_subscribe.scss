@@ -2,25 +2,79 @@ $style: "subscribe";
 .#{$style} {
     background: url("../img/subscribe_bg_img.png") no-repeat center;
     background-size: cover;
-    padding: 145px 0 163px;
+    padding: 160px 0 50px;
+    background-position-x: 115%;
+    background-position-y: -7%;
+    background-size: 178%;
+    @media screen and (min-width: 576px) {
+        padding: 160px 0 50px;
+        background-position-x: 221%;
+        background-position-y: -14%;
+        background-size: 120%;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 145px 0 163px;
+        background-position-x: 100%;
+        background-position-y: 100%;
+        background-size: 100%;
+    }
+    &__container {
+        text-align: center;
+        @media screen and (min-width: 576px) {
+            text-align: center;
+        }
+        @media screen and (min-width: 768px) {
+            text-align: initial;
+        }
+    }
     &__title {
-        @include text($subscribe-title-size,
+        @include text($subscribe-title-mobile,
         700,
         $dark-color);
-        margin-bottom: 34px;
+        margin-bottom: 20px;
+        @media screen and (min-width: 576px) {
+            margin-bottom: 34px;
+            font-size: $subscribe-title-size;
+        }
     }
     &__text {
         max-width: 545px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        @media screen and (min-width: 576px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__form {
+        @include flex(center,
+        center,
+        column);
+        @media screen and (min-width: 576px) {
+            @include flex(center, center, column);
+        }
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: initial;
+            align-items: initial;
+            flex-direction: initial;
+        }
     }
     &__input {
         max-width: 570px;
         width: 100%;
         padding: 18px 0 18px 15px;
-        margin-right: 30px;
+        margin-right: 0;
+        margin-bottom: 15px;
         outline: none;
         border: 1px solid $dark-color;
         @include transition();
+        @media screen and (min-width: 576px) {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+        @media screen and (min-width: 768px) {
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
         &:hover,
         &:focus {
             border: 1px solid $subscribe-btn-color;
@@ -29,6 +83,7 @@ $style: "subscribe";
     &__btn {
         padding: 16px 30px;
         background-color: $subscribe-btn-color;
+        will-change: transform;
         @include transition();
         &:hover {
             background: rgba(darken($subscribe-btn-color, 10%), 0.9);

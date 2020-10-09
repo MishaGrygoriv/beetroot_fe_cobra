@@ -1,9 +1,18 @@
 $style: "footer";
 .#{$style} {
     background-color: $dark-color;
-    padding: 32px 0;
+    padding: 20px 0;
+    @media screen and (min-width: 576px) {
+        padding: 32px 0;
+    }
     &__container {
-        @include flex(space-between, center);
+        @include flex(center, center, column-reverse);
+        @media screen and (min-width: 576px) {
+            @include flex(center, center, column-reverse);
+        }
+        @media screen and (min-width: 768px) {
+            @include flex(space-between, center);
+        }
     }
     &__text {
         @include text($footer-text-size, 300, $footer-text-color);

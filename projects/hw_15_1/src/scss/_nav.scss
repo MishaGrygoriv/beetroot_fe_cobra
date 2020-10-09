@@ -5,8 +5,10 @@ $style: "nav";
     left: 0;
     top: 0;
     z-index: 10;
-    padding-top: 50px;
     @include transition();
+    @media screen and (min-width: 576px) {
+        padding-top: 50px;
+    }
     &._shadow {
         background-color: rgba($light-color, 0.5);
         box-shadow: 0 5px 20px -7px $black-color;
@@ -15,7 +17,10 @@ $style: "nav";
         padding-top: 0;
     }
     &__container {
-        @include flex(space-between, center, row);
+        @include flex(center, center, column);
+        @media screen and (min-width: 576px) {
+            @include flex(space-between, center, row);
+        }
     }
     &__logo {
         display: block;
@@ -27,12 +32,39 @@ $style: "nav";
         }
     }
     &__list {
-        @include flex(flex-start, center, row);
+        display: none;
+        @media screen and (min-width: 576px) {
+            display: none;
+        }
+        @media screen and (min-width: 768px) {
+            @include flex(flex-end, center, row);
+        }
+        @media screen and (min-width: 1024px) {
+            @include flex(flex-start, center, row);
+        }
     }
     &__item {
-        margin-right: 40px;
+        margin-right: 20px;
         &:last-child {
             margin-right: 0;
+        }
+        @media screen and (min-width: 576px) {
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            margin-right: 40px;
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
     &__link {

@@ -1,29 +1,70 @@
 $style: "blog";
 .#{$style} {
     background-color: $blog-bg-color;
-    padding: 100px 0 120px;
+    padding: 50px 0;
+    @media screen and (min-width: 576px) {
+        padding: 100px 0 120px;
+    }
     &__container {
         text-align: center;
     }
     &__title {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        @media screen and (min-width: 576px) {
+            margin-bottom: 30px;
+        }
     }
     &__text {
         margin: auto;
         max-width: 570px;
-        margin-bottom: 47px;
+        margin-bottom: 25px;
+        @media screen and (min-width: 576px) {
+            margin-bottom: 47px;
+        }
     }
     &__list {
-        @include flex(space-between, stretch);
-        margin-bottom: 50px;
+        @include flex(center, center, column);
+        margin-bottom: 30px;
+        @media screen and (min-width: 576px) {
+            @include flex(center, center, column);
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width: 768px) {
+            @include flex(center, center, column);
+            margin-bottom: 30px;
+        }
+        @media screen and (min-width: 1024px) {
+            @include flex(space-between, stretch);
+            margin-bottom: 50px;
+        }
     }
     &__item {
         position: relative;
         width: 100%;
         max-width: 372px;
-        margin-right: 28px;
+        margin-right: 0;
+        margin-bottom: 20px;
         &:last-child {
             margin-right: 0;
+            margin-bottom: 0;
+        }
+        @media screen and (min-width: 576px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            margin-right: 28px;
+            margin-bottom: 0;
         }
     }
     &__link {
@@ -31,9 +72,13 @@ $style: "blog";
         text-decoration: none;
         color: inherit;
         cursor: pointer;
-        transition: all 0.3s ease;
+        will-change: transform;
+        transition: transform 0.4s;
         &:hover {
-            transform: scale(1.1);
+            transform: scale(0.8);
+            @media screen and (min-width: 576px) {
+                transform: scale(1.1);
+            }
         }
     }
     &__img-wrapper {
@@ -66,7 +111,10 @@ $style: "blog";
         bottom: 25px;
         text-align: left;
         left: 20px;
-        max-width: 330px;
+        max-width: 275px;
+        @media screen and (min-width: 576px) {
+            max-width: 330px;
+        }
     }
     &__description-title {
         @include text($btn-size, 700, $light-color);

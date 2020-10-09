@@ -1,9 +1,17 @@
 $style: "main";
 .#{$style} {
+    overflow: hidden;
     &__title {
-        @include text($section-title, 700, $light-color);
+        @include text($header-logo-size, 700, $light-color);
+        text-align: center;
+        @media screen and (min-width: 576px) {
+            font-size: $section-title;
+        }
         &--dark {
-            @include text($section-title, 700, $dark-color);
+            @include text($header-logo-size, 700, $dark-color);
+            @media screen and (min-width: 576px) {
+                font-size: $section-title;
+            }
         }
     }
     &__text {
@@ -15,6 +23,7 @@ $style: "main";
         }
     }
     &__btn {
+        display: inline-block;
         @include text($btn-size, 300, $light-color);
         box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
         border: none;

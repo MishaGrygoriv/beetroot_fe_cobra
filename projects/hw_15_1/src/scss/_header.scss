@@ -1,26 +1,71 @@
 $style: "header";
 .#{$style} {
-    min-height: 100vh;
     background: url("../img/header_bg.png") no-repeat center;
     background-color: $header-bg-color;
     background-size: auto;
-    padding: 150px 0 68px;
+    padding: 0;
     position: relative;
+    overflow: hidden;
+    @media screen and (min-width: 576px) {
+        padding: 50px 0 20px;
+    }
+    @media screen and (min-width: 768px) {
+        padding: 50px 0 20px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 120px 0 40px;
+    }
+    @media screen and (min-width: 1280px) {
+        padding: 150px 0 68px;
+    }
     &__container {
         min-height: 100vh;
+        @include flex(center,
+        center);
+        @media screen and (min-width: 576px) {
+            @include flex(flex-start, center);
+        }
     }
     &__description {
         @include flex(flex-start,
-        start,
+        center,
         column);
-        max-width: calc(100% / 3);
-        padding-top: 150px;
+        max-width: 230px;
+        text-align: center;
+        @media screen and (min-width: 576px) {
+            @include flex(flex-start, start, column);
+            max-width: 450px;
+            text-align: initial;
+        }
+        @media screen and (min-width: 768px) {
+            @include flex(flex-start,
+            start,
+            column);
+            max-width: 450px;
+            text-align: initial;
+        }
+        @media screen and (min-width: 1024px) {
+            @include flex(flex-start,
+            start,
+            column);
+            max-width: calc(100% / 3);
+            text-align: initial;
+        }
     }
     &__title {
-        @include text($header-title-size,
+        @include text($header-title-mobile,
         900,
         $dark-color);
         margin-bottom: 34px;
+        @media screen and (min-width: 576px) {
+            font-size: $section-title-mobile;
+        }
+        @media screen and (min-width: 768px) {
+            font-size: $section-title-mobile;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: $header-title-size;
+        }
     }
     &__text {
         @include text($text-size,
@@ -28,6 +73,15 @@ $style: "header";
         $dark-color);
         line-height: 1.59;
         margin-bottom: 31px;
+        @media screen and (min-width: 576px) {
+            font-size: $btn-size;
+        }
+        @media screen and (min-width: 768px) {
+            font-size: $btn-size;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: $text-size;
+        }
     }
     &__btn {
         @include text($btn-size,
@@ -52,14 +106,11 @@ $style: "header";
     &__scroll {
         content: "";
         position: absolute;
-        right: 50%;
-        bottom: 280px;
+        bottom: 75px;
         animation: pulsing 2s infinite;
         @media screen and (min-width: 576px) {
-            bottom: 240px;
-        }
-        @media screen and (min-width: 1440px) {
             bottom: 230px;
+            right: 50%;
         }
         &:hover {
             animation: none;
