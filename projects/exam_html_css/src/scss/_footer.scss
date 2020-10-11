@@ -1,0 +1,36 @@
+$style: "footer";
+.#{$style} {
+    background-color: $dark-color;
+    padding: 120px 0 53px;
+    &__container {
+        @include flex(center, center, column);
+    }
+    &__logo {
+        @include text($small-logo-size, 700, $light-color);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        @include transition();
+        &:hover {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+        }
+    }
+    &__link {
+        color: $light-color;
+    }
+    &__text {
+        margin-bottom: 30px;
+    }
+    &__social-list {
+        @include flex(center, center, row);
+    }
+    &__social-item {
+        margin-right: 21px;
+        &:last-child {
+            margin-right: 0;
+        }
+        transition: all 0.5s ease;
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+}

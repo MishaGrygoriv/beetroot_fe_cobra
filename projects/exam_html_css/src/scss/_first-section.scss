@@ -1,0 +1,103 @@
+$style: "first-section";
+.#{$style} {
+    &__container {
+        background: url("../img/first_section_bg.jpeg") no-repeat center;
+        background-size: cover;
+        padding: 120px 0;
+    }
+    &__col-wrapper {
+        @include flex(space-between,
+        center);
+    }
+    &__col-first {
+        @include flex(flex-start,
+        flex-start,
+        column);
+        max-width: 500px;
+    }
+    &__title {
+        margin-bottom: 59px;
+    }
+    &__text {
+        margin-bottom: 40px;
+    }
+    &__col-second {
+        @include flex($direction: column);
+        max-width: 475px;
+        width: 100%;
+    }
+    &__img-wrapper {
+        width: 100%;
+        height: 100%;
+        &:last-child {
+            @include flex(flex-end,
+            flex-end);
+        }
+    }
+    &__img {
+        transition: 1s;
+        transform: scale(1);
+        &:hover {
+            transform: scale(1.1);
+            cursor: all-scroll;
+        }
+    }
+    /*&__img-wrapper {
+        position: relative;
+        padding-bottom: 46%;
+        width: 73%;
+        margin-bottom: 5px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        object-fit: cover;
+    }*/
+    &__list-wrapper {
+        background-color: $section-bg-color;
+        padding: 100px 0 113px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("../img/shape-half-circle.png") no-repeat center;
+            width: 100%;
+            height: 100%;
+            left: -7px;
+            top: -80px;
+        }
+    }
+    &__list {
+        @include flex(space-around,
+        center,
+        row);
+    }
+    &__item {
+        @include flex(center,
+        center,
+        column);
+    }
+    &__icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 30px;
+        &--magnifying-glass {
+            fill: $btn-color;
+        }
+        &--tick {
+            fill: $icon-tick-color;
+        }
+        &--cool {
+            fill: $icon-cool-color;
+        }
+    }
+    &__subtitle {
+        color: $text-color;
+    }
+}

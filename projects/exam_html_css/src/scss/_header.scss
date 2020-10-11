@@ -1,0 +1,155 @@
+$style: "header";
+.#{$style} {
+    background: url("../img/header_bg.jpeg") no-repeat center;
+    background-size: cover;
+    &__container {
+        @include flex(center,
+        center,
+        column);
+        min-height: 100vh;
+    }
+    &__title {
+        @include text($big-logo-size,
+        700,
+        $light-color);
+        text-transform: uppercase;
+        letter-spacing: 4.8px;
+        margin-bottom: 10px;
+    }
+    &__logo {
+        color: $light-color;
+        @include transition();
+        &:hover {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+        }
+    }
+    &__subtitle {
+        @include text($header-subtitle-size,
+        400,
+        $light-color);
+        letter-spacing: 6.02px;
+        margin-bottom: 50px;
+    }
+    &__form {
+        width: 100%;
+        max-width: 650px;
+        @include flex(center,
+        center);
+        margin-bottom: 100px;
+    }
+    &__input {
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        background-color: $light-color;
+        height: 60px;
+        border: none;
+        border-left: 5px solid transparent;
+        outline: none;
+        @include transition();
+        &::placeholder,
+        &:focus {
+            @include text($header-small-size,
+            400,
+            $header-placeholder-color);
+            letter-spacing: 2.8px;
+        }
+        &:hover,
+        &:focus {
+            border-left: 5px solid $btn-color;
+        }
+    }
+    &__btn {
+        @include text($header-small-size,
+        300,
+        $light-color);
+        font-family: $secondary_font;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        outline: none;
+        background-color: $btn-color;
+        border: 2px solid $light-color;
+        @include flex(center,
+        center);
+        padding: 0 50px 0 30px;
+        height: 60px;
+        cursor: pointer;
+        position: relative;
+        @include transition();
+        &:hover {
+            background-color: rgba($btn-color, 0.5);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+        }
+    }
+    &__icon {
+        position: absolute;
+        fill: $light-color;
+        height: 23px;
+        width: 23px;
+        right: 15px;
+    }
+    &__scroll-wrapper {
+        text-align: center;
+        position: relative;
+        @include transition();
+        &:hover {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+        }
+    }
+    &__scroll-text {
+        @include text($header-small-size,
+        400,
+        $light-color);
+        letter-spacing: 2.8px;
+        display: block;
+    }
+    &__scroll-svg {
+        position: absolute;
+        top: 27px;
+        bottom: 0;
+        right: 0;
+        left: 45px;
+    }
+    &__nav {
+        background-color: $btn-color;
+        padding: 28px 0;
+    }
+    &__nav-container {
+        @include flex(space-between,
+        center,
+        row);
+        text-transform: uppercase;
+    }
+    &__nav-logo {
+        @include text($small-logo-size,
+        700,
+        $light-color);
+        letter-spacing: 2.4px;
+        display: inline-block;
+        @include transition();
+        &:hover {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+        }
+    }
+    &__nav-list {
+        @include flex(center,
+        stretch,
+        row);
+    }
+    &__nav-item {
+        margin-right: 50px;
+        &:last-child {
+            margin-right: 0;
+        }
+        @include transition();
+        &:hover {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+        }
+    }
+    &__nav-link {
+        font-family: $secondary_font;
+        @include text($header-small-size,
+        400,
+        $light-color);
+    }
+}

@@ -1,0 +1,26 @@
+$style: "second-section";
+.#{$style} {
+    background: url("../img/second_section_bg.jpeg") no-repeat center;
+    background-size: cover;
+    padding: 230px 0 100px;
+    &__container {
+        @include flex(flex-start,
+        flex-start);
+    }
+    &__description-wrapper {
+        padding: 50px 30px;
+        max-width: 540px;
+    }
+    &__subtitle {
+        margin-bottom: 30px;
+    }
+    &__title {
+        margin-bottom: 30px;
+    }
+    &__text {
+        margin-bottom: 48px;
+    }
+    &__btn {
+        padding: 0 61px;
+    }
+}

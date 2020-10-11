@@ -1,0 +1,34 @@
+$style: "main";
+.#{$style} {
+    &__title {
+        font-family: $secondary_font;
+        @include text($section-title-size, 400, $light-color);
+    }
+    &__text {
+        @include text($section-text-size, 400, $text-color);
+        line-height: 1.63;
+    }
+    &__btn {
+        @include text($section-text-size, 400, $light-color);
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        background: linear-gradient(50deg, #496bfe 40%, #5474fd 40%);
+        opacity: 1;
+        height: 60px;
+        @include flex(center, center);
+        padding: 0 42px;
+        cursor: pointer;
+        @include transition();
+        &:hover {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
+            background: linear-gradient(50deg, #3e61fff8 40%, #4c6dffea 40%);
+        }
+    }
+    &__subtitle {
+        @include text($section-subtitle-size, 400, $text-color);
+    }
+    &__description-wrapper {
+        background-color: rgba($dark-color, 0.9);
+        @include flex(flex-start, flex-start, column);
+    }
+}

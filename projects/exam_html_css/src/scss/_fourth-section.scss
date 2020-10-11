@@ -1,0 +1,54 @@
+$style: "fourth-section";
+.#{$style} {
+    background: url("../img/fourth_section_bg.jpeg") no-repeat center;
+    background-size: cover;
+    padding: 120px 0;
+    &__container {
+        @include flex(center,
+        center,
+        column);
+    }
+    &__title {
+        margin-bottom: 91px;
+    }
+    &__col-wrapper {
+        @include flex(stretch,
+        stretch,
+        row);
+    }
+    &__col-first {
+        min-width: 445px;
+        width: 100%;
+    }
+    &__img-wrapper {
+        position: relative;
+        padding-bottom: 72%;
+        width: 100%;
+    }
+    &__img {
+        position: absolute;
+        @include position();
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__col-second {
+        max-width: 665px;
+        padding: 50px 54px 48px 60px;
+    }
+    &__subtitle {
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+    &__qoute-icon {
+        display: inline-block;
+    }
+    &__icon {
+        color: $icon-cool-color;
+        font-size: $quote-size;
+        position: relative;
+        bottom: 10px;
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
