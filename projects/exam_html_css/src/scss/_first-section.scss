@@ -22,11 +22,12 @@ $style: "first-section";
         margin-bottom: 40px;
     }
     &__col-second {
-        @include flex($direction: column);
-        max-width: 475px;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: 40%;
+        flex: 1;
     }
-    &__img-wrapper {
+    /*&__img-wrapper {
         width: 100%;
         height: 100%;
         &:last-child {
@@ -41,13 +42,14 @@ $style: "first-section";
             transform: scale(1.1);
             cursor: all-scroll;
         }
-    }
-    /*&__img-wrapper {
+    }*/
+    &__img-wrapper {
         position: relative;
         padding-bottom: 46%;
         width: 73%;
         margin-bottom: 5px;
         &:last-child {
+            align-self: flex-end;
             margin-bottom: 0;
         }
     }
@@ -58,7 +60,7 @@ $style: "first-section";
         left: 0;
         right: 0;
         object-fit: cover;
-    }*/
+    }
     &__list-wrapper {
         background-color: $section-bg-color;
         padding: 100px 0 113px;
