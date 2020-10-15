@@ -88,7 +88,10 @@ $style: "header";
         300,
         $light-color);
         background-color: $header-btn-color;
-        padding: 20px 25px;
+        @include flex(center,
+        center);
+        height: 60px;
+        padding: 0 25px;
         border: none;
         outline: none;
         cursor: pointer;
@@ -106,9 +109,21 @@ $style: "header";
     &__scroll {
         content: "";
         position: absolute;
-        bottom: 75px;
+        bottom: 30px;
         animation: pulsing 2s infinite;
         @media screen and (min-width: 576px) {
+            bottom: 75px;
+            right: 50%;
+        }
+        @media screen and (min-width: 768px) {
+            bottom: 100px;
+            right: 50%;
+        }
+        @media screen and (min-width: 1024px) {
+            bottom: 170px;
+            right: 50%;
+        }
+        @media screen and (min-width: 1280px) {
             bottom: 230px;
             right: 50%;
         }
