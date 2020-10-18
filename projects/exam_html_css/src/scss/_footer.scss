@@ -18,7 +18,7 @@ $style: "footer";
         color: $light-color;
     }
     &__text {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
     &__social-list {
         @include flex(center, center, row);
@@ -31,6 +31,12 @@ $style: "footer";
         transition: all 0.5s ease;
         &:hover {
             transform: translateY(-5px);
+        }
+    }
+    &__icon {
+        @include transition(color);
+        &:hover {
+            color: $btn-color;
         }
     }
 }

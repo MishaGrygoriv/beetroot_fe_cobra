@@ -81,12 +81,17 @@ $style: "header";
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.75);
         }
     }
+    &__btn:hover &__icon {
+        transform: scale(1.6);
+        transform: translateX(-310%);
+    }
     &__icon {
         position: absolute;
         fill: $light-color;
         height: 23px;
         width: 23px;
         right: 15px;
+        @include transition(transform);
     }
     &__scroll-wrapper {
         text-align: center;
@@ -102,13 +107,19 @@ $style: "header";
         $light-color);
         letter-spacing: 2.8px;
         display: block;
-    }
-    &__scroll-svg {
-        position: absolute;
-        top: 27px;
-        bottom: 0;
-        right: 0;
-        left: 45px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            right: 50%;
+            height: 8px;
+            width: 8px;
+            border-left: 2px solid $light-color;
+            border-bottom: 2px solid $light-color;
+            transform: rotate(-45deg);
+            animation: arrow 1.2s infinite alternate;
+        }
     }
     &__nav {
         background-color: $btn-color;
@@ -151,5 +162,29 @@ $style: "header";
         @include text($header-small-size,
         400,
         $light-color);
+        position: relative;
+        &::after {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 0%;
+            content: "";
+            background-color: rgba(255, 255, 255, 0.75);
+            height: 2px;
+            transition: all 0.4s ease;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+    }
+    @keyframes arrow {
+        from {
+            transform: translateY(0px) rotate(-45deg);
+        }
+        to {
+            transform: translateY(10px) rotate(-45deg);
+        }
     }
 }

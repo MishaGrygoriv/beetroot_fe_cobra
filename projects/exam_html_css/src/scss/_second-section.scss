@@ -3,10 +3,6 @@ $style: "second-section";
     background: url("../img/second_section_bg.jpeg") no-repeat center;
     background-size: cover;
     padding: 230px 0 100px;
-    &__container {
-        @include flex(flex-start,
-        flex-start);
-    }
     &__description-wrapper {
         padding: 50px 30px;
         max-width: 540px;

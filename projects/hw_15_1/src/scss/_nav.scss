@@ -27,6 +27,12 @@ $style: "nav";
         font-family: $title-font;
         @include text($header-logo-size, 400, $dark-color);
         animation-play-state: paused;
+        @media screen and (min-width: 576px) {
+            padding-left: 250px;
+        }
+        @media screen and (min-width: 768px) {
+            padding-left: 0;
+        }
         &:hover {
             animation: text-shadow 1.5s ease-in-out infinite;
         }

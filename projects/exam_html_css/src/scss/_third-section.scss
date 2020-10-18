@@ -3,10 +3,6 @@ $style: "third-section";
     background: url("../img/third_section_bg.jpeg") no-repeat center;
     background-size: cover;
     padding: 230px 0 100px;
-    &__container {
-        @include flex(flex-end,
-        flex-end);
-    }
     &__description-wrapper {
         padding: 50px 30px;
         max-width: 540px;

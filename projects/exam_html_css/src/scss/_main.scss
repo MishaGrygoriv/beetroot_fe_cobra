@@ -24,6 +24,12 @@ $style: "main";
             background: linear-gradient(50deg, #3e61fff8 40%, #4c6dffea 40%);
         }
     }
+    &__section-container {
+        @include flex(flex-start, flex-start);
+        &--left-side {
+            @include flex(flex-end, flex-end);
+        }
+    }
     &__subtitle {
         @include text($section-subtitle-size, 400, $text-color);
     }
