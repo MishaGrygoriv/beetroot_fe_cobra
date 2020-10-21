@@ -10,23 +10,21 @@ $style: "section";
     }
     &__header-text {
         @include text($header-text-size, 500, $header-text-color);
-        margin-bottom: 18px;
+    }
+    &__title-link {
+        text-decoration: none !important;
+        display: block;
+        margin-bottom: 45px;
     }
     &__header-title {
         @include text($header-title-size, 900, $header-title-color);
         font-family: $title-font;
-        margin-bottom: 45px;
-        span {
-            animation: reveal 3000ms infinite ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
-            transition: all 2s ease;
-            &:hover {
-                animation: paused;
-                text-shadow: 2px 1px 2px $header-title-color;
-            }
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
+        margin: 0 !important;
+        animation: reveal 3000ms infinite ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+        transition: all 2s ease;
+        &:hover {
+            animation: paused;
+            text-shadow: 2px 1px 2px $header-title-color;
         }
     }
     &__header-img {
@@ -74,18 +72,21 @@ $style: "section";
         max-width: 390px;
         max-height: 390px;
         position: relative;
+        width: 100%;
         border: 1px solid $header-title-color;
         figure {
             overflow: hidden;
         }
         img {
-            position: relative;
+            position: absolute;
             @include position();
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             transition: 1s;
             transform: scale(1);
             &:hover {
-                transform: scale(1.3);
+                transform: scale(1.2);
                 cursor: all-scroll;
             }
         }
@@ -111,6 +112,7 @@ $style: "section";
     &__slider-img {
         display: flex;
         position: relative;
+        width: 100%;
         &::before,
         &::after {
             content: "";
@@ -133,6 +135,10 @@ $style: "section";
     }
     &__slider-figure {
         margin-bottom: 0;
+        position: relative;
+        padding-bottom: 99.5%;
+        width: 100%;
+        height: 100%;
     }
     &__slider-description {
         @include flex(center, center, column);
@@ -220,7 +226,9 @@ $style: "section";
         }
     }
     &__slider-button {
-        @include text($slider-text-size, 700, $slider-title-color);
+        font-size: $slider-text-size;
+        font-weight: 700;
+        color: $slider-title-color !important;
         font-family: $btn-font;
         padding: 1px 10px;
         border: 1px solid $header-title-color;
@@ -229,10 +237,10 @@ $style: "section";
         background-color: transparent;
         @include transition();
         &:hover {
-            /*background-color: $header-title-color;*/
-            color: $header-title-color;
+            color: $header-title-color !important;
             box-shadow: 0 0 10px $header-title-color;
             text-shadow: 0 0 5px $header-title-color;
+            text-decoration: none;
         }
     }
     @keyframes reveal {
